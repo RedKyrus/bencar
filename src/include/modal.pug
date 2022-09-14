@@ -16,19 +16,20 @@ mixin inputTel(plaName, className)
 +modalFrame("quote")
   form(class="in-info-content-modal")
     button(type="button" class="btn-close fn-close-modal")
-    p(class="info-title") 렌터카 견적 신청하기!
+    p(class="info-title") 벤츠 견적 받아보기!
+    p(class="info-ment")
+      |벤츠 전문상담원이 당신의 문의를 기다립니다.<br>
+      |장기렌트렌트, 신차리스 문의주세요! 
     div(class="in-info-area")
-      +inputText("이        름","in-name")
-      +inputTel("연  락  처","in-phone" )
-      +inputText("관심차종 1", "in-carype in-cartype01")
-      +inputText("관심차종 2", "in-cartype02")
-      +inputText("관심차종 3", "in-cartype03")
+      +inputText("이름을 입력해 주세요","in-name")
+      +inputTel("휴대폰 번호를 입력해 주세요","in-phone" )
+      +inputText("희망 차종을 입력해 주세요", "in-carype in-cartype01")
     div(class="agree-area")
       input(type="checkbox", id="check-agree" class="check-agree")
-      label(for="check-agree" class="check-agree-label") 개인정보수집동의
-      button(type="button" class="btn-show fn-open-modal-agree") 보기
+      label(for="check-agree" class="check-agree-label") 개인정보 제공에 동의합니다.
+      //- button(type="button" class="btn-show fn-open-modal-agree") 보기
       
-    button(type="button" class="btn-car-quote fn-close-modal fn-open-modal-complete") 간편견적신청
+    button(type="button" class="btn-car-quote fn-close-modal fn-open-modal-complete") 벤츠 견적 상담
 
 //모달-동의서
 +modalFrame("agree")
@@ -62,22 +63,22 @@ mixin inputTel(plaName, className)
         span.tit 이용약관
         br
         | 벤카 홈페이지는 온라인상에서 귀하의 개인정보보호를 소중히 생각합니다. (개인정보보호정책)
-        |    벤가 홈페이지는 이용하는 회원님들의 권익을 보호하여 사용자들이 안심하고 서비스를 받을 수 있도록 준수합니다.
+        |    벤카 홈페이지는 이용하는 회원님들의 권익을 보호하여 사용자들이 안심하고 서비스를 받을 수 있도록 준수합니다.
         br
         br
         span.h [개인정보의 수집목적 및 방법]
-        |    벤가 홈페이지는 “개인정보보호법’등 관계법령 및 트라이앵글의 개인정보처리방침에서 정하는 바에 따라 회원의 개인정보를 보호하며 트라이앵글는 개인정보를 개인의 동의 없이 수집하지 않습니다.
-        |    벤가의 개인정보보호정책 또는 이용용약관의 내용에 대해 「동의함」,「동의 안함」으로 선택하는 절차를 마련하여 「동의함」선택하면 개인정보수집에 대해 동의한 것으로 봅니다.
+        |    벤카 홈페이지는 “개인정보보호법’등 관계법령 및 트라이앵글의 개인정보처리방침에서 정하는 바에 따라 회원의 개인정보를 보호하며 트라이앵글는 개인정보를 개인의 동의 없이 수집하지 않습니다.
+        |    벤카의 개인정보보호정책 또는 이용용약관의 내용에 대해 「동의함」,「동의 안함」으로 선택하는 절차를 마련하여 「동의함」선택하면 개인정보수집에 대해 동의한 것으로 봅니다.
         br
         br
         span.h [회원 이용 범위]
-        |    벤가 홈페이지에 접속하여 이 약관에 동의하고, 회원이 벤가 홈페이지에 연계된 주요 홈페이지의 이용을 원할 경우 홈페이지의 이용여부를 승낙하는 것만으로 별도의 가입없이 해당 홈페이지를 이용할 수 있습니다.
+        |    벤카 홈페이지에 접속하여 이 약관에 동의하고, 회원이 벤카 홈페이지에 연계된 주요 홈페이지의 이용을 원할 경우 홈페이지의 이용여부를 승낙하는 것만으로 별도의 가입없이 해당 홈페이지를 이용할 수 있습니다.
     button.fn-close-modal.btn-close 확인
 
 //완료
 +modalFrame("complete")
   //완료팝업 이미지경로 수정
-  div.logo 벤가
+  //- div.logo 벤카
   p.p-main 신청이 완료됐습니다!
   div.bar 
   p.p-sub 전문상담원이 <br> 빠르게 연락드리겠습니다.
@@ -96,7 +97,7 @@ mixin inputTel(plaName, className)
 +modalFrame("branch")
   button(type="button" class="btn-close fn-close-modal")
   p.title-main 파트너 모집
-  p.title-sub 벤가과 함께 쉽고<br> 빠르게 영업하세요~!
+  p.title-sub 벤카과 함께 쉽고<br> 빠르게 영업하세요~!
   p.title-ment 영업이 어렵게만 느껴지시나요?<br>온라인 DB, 영업노하우 제공<br>(신차영업, 장기렌트, 리스 경력자 우대)
   ul.branch-cont
     li 

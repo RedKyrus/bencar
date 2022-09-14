@@ -103,9 +103,34 @@
 }
 
 
-.intro-bg-area{
-  // position: absolute;
-  // top: 0px;
+.intro-area{
+  position: absolute;
+  top: 114px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: $baseSectWithSizeSub;
+  padding-top: 48px;
+  text-align: left;
+
+  .intro-title-box{
+    p{
+      color: #fff;
+    }
+    .title-sub{
+      font-size: 23px;
+    }
+    .title-main{
+      font-size: 62px;
+      margin-top: 24px;
+      line-height: 1.2;
+    }
+  }
+  .benz-logo-box{
+    margin-top: 35px;
+    img{
+
+    }
+  }
 }
 
 
