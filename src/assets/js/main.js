@@ -1,134 +1,53 @@
+import {CountUp} from './lib/countUp.min.js'
+
+
 let onready = () =>{
 
-  const slideIntroClassName =".intro-slide-cont "
-  // const swiper = new Swiper(".mySwiper", {});
 
-  const swiperIntro = new Swiper(slideIntroClassName+'.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-    // slidesPerView: 1,
-    // slidesPerGroup: 1,
-    // autoplay: false,
-    allowTouchMove: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
-    // If we need pagination
-    pagination: {
-      el: slideIntroClassName+'.slide-pagination-area',
-      clickable: true,
-      
-    },
-    navigation: {
-      nextEl: slideIntroClassName+' .slide-btn-next',
-      prevEl: slideIntroClassName+' .slide-btn-prev',
-    },
+  headerSet();
 
-    // grabCursor: true,
-    // effect: "creative",
-    // creativeEffect: {
-    //   prev: {
-    //     shadow: true,
-    //     translate: [0, 0, -800],
-    //     rotate: [180, 0, 0],
-    //   },
-    //   next: {
-    //     shadow: true,
-    //     translate: [0, 0, -800],
-    //     rotate: [-180, 0, 0],
-    //   },
-    // },
-  
-
-    // breakpoints: {
-    //   901:{
-    //     slidesPerView: 1,
-    //     slidesPerGroup: 1,
-    //   }
-    // }
-  
-  
-  });
-
-  swiperCommonSet(`.slide-cont-release`);
-  swiperCommonSet(`.slide-cont-special`);
-
-  // window.addEventListener('resize', rearrangementSpecial)
-}
-
-
-const swiperCommonSet = (slideClassName) =>{
-  const swiperCommon = new Swiper(`${slideClassName} .swiper`, {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 12,
-  
-    // // If we need pagination
-    pagination: {
-      el: slideClassName+' .slide-pagination',
-      //el: ".swiper-pagination",
-      clickable: true,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: slideClassName+' .slide-btn-next',
-      prevEl: slideClassName+' .slide-btn-prev',
-    },
-  
-    breakpoints: {
-      901:{
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 26,
-  
-      }
-    }
-  });
+  countUpSet();
 
 }
 
-
-const slideReleaseClassName =".slide-cont-release";
-const swiperRelease = new Swiper(`${slideReleaseClassName} .swiper`, {
-  // Optional parameters
-  // direction: 'vertical',
-  loop: true,
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 12,
-
-  // // If we need pagination
-  pagination: {
-    el: slideReleaseClassName+'.slide-pagination',
-    //el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: slideReleaseClassName+'.slide-btn-next',
-    prevEl: slideReleaseClassName+'.slide-btn-prev',
-  },
-
-  breakpoints: {
-    901:{
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 26,
-
-    }
-  }
-
-
-});
 
 window.addEventListener('DOMContentLoaded', onready);
 
 
+const options = {
+  startVal: 10,
+  suffix: '+',
+};
 
+function countUpSet(){
+  let countTargetList = document.querySelectorAll(".count-target");
+  if(countTargetList === null) return;
+
+  countTargetList.forEach((item, index) => {
+    //아이디 부여
+    let id = "countTargetId" + (index+1).toString();
+    item.id = id;
+    let countNum = parseInt(item.innerText);
+    console.dir(countNum);
+
+    let countTarget = new CountUp(id, countNum, options);
+    if (!countTarget.error) {
+      countTarget.start();
+    } else {
+      console.error(countTarget.error);
+    }
+
+  });
+}
+
+
+function headerSet(){
+  let header = document.querySelector(".header");
+  
+  if(header === null) return;
+
+  header.classList.add("header-pos-absolute");
+
+}
+
+  

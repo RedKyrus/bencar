@@ -116,16 +116,18 @@ mixin carInfobox(carName, price, fee, imgName)
   li
     a(class="fn-open-modal-quote")
       div.car-img
-        p.consult 상담
-        img(src=`${imgPath}/car/${imgName}`, alt="자동차 이미지")
+        p(class="top-consult"): span 상담
+        div.img-box
+          img(src=`${imgPath}/car/${imgName}`, alt="자동차 이미지")
       div.car-info
         p.name=carName
-        p.price
-          | 차량가 :
-          span.span-num #{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
-        p.rental-fee
-          | 월대여료 :
-          span.span-num #{fee.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+        div.info-price
+          p.p-item.price
+            | 차량가 : 
+            span.span-num #{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+          p.p-item.rental-fee
+            | 월대여료 : 
+            span.span-num #{fee.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
       button(type="button" class="btn-consult") 장기렌트 / 리스 견적문의
 
 
@@ -134,18 +136,19 @@ block content
   main(class="wrap-container page-main") 
     section(class="sect sect-intro")
       div(class="sect-container")
-        img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
+        div.intro-bg-area
+          img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
         div.intro-info-bar 
-          ul.info-ul 
+          ul.info-ul
             li 
               p.name 오늘상담문의
-              p.num 205+
+              p.num.count-target 205
             li 
               p.name 벤츠즉시출고
-              p.num 49+
+              p.num.count-target 49
             li 
               p.name 누적계약수
-              p.num 27,576+
+              p.num.count-target 27576
 
     section(class="sect sect-event")
       div(class="sect-container")
@@ -180,16 +183,21 @@ block content
           h4.cartype-title Hatchback 
           ul.car-type-ul
             +carInfobox("A-Class Hatchback", 145000000,3500000,"01_Hatchback/A_Class_Hatchback.png")
-            +carInfobox("EQS", 145000000,3500000,"")
-          h4.cartype-title Hatchback 
+          h4.cartype-title Sedan
           ul.car-type-ul
-            +carInfobox("EQS", 145000000,3500000,"none")
-            +carInfobox("EQS", 145000000,3500000,"none")
-            +carInfobox("EQS", 145000000,3500000,"none")
-            +carInfobox("EQS", 145000000,3500000,"none")
-            +carInfobox("EQS", 145000000,3500000,"none")
+            +carInfobox("A-Class Sedan", 145000000,3500000,"02_Sedan/A_Class_Sedan.png")
+            +carInfobox("C-Class Sedan", 145000000,3500000,"02_Sedan/C_Class_Sedan.png")
+            +carInfobox("E-Class Sedan", 145000000,3500000,"02_Sedan/E_Class_Sedan.png")
+            +carInfobox("EQS Sedan", 145000000,3500000,"02_Sedan/EQS_Sedan.png")
+            +carInfobox("S-Class Sedan", 145000000,3500000,"02_Sedan/S_Class_Sedan.png")
+            +carInfobox("S-Class Sedan", 145000000,3500000,"02_Sedan/S_Class_Sedan.png")
+            +carInfobox("S-Class Sedan Long", 145000000,3500000,"02_Sedan/S_Class_Sedan_Long.png")
+          h4.cartype-title SUV
+          ul.car-type-ul
+            +carInfobox("EQA 20SUV", 145000000,3500000,"03_SUV/EQA_20SUV.png")
+            
         
-        .notice 
+        .cartype-notice 
           p.notice-title 유의사항
           p.notice-text ※ 차량 이미지는 실제와 다를 수 있으며, 일부 기능, 장비 및 색상은 차이가 있을 수 있습니다. 
 
@@ -229,7 +237,7 @@ block content
             div.tel-title
               div.icon
                 img(src=`${imgPath}/common/icon_consult.png`, alt="아이콘")
-              p.title 장기렌트카 상담번호
+              p.title 벤카장기렌트, 리스 전문
             p.tel-cont TEL: 1533-3753 
               span (연중무휴상담신청)
 
@@ -253,5 +261,8 @@ block content
             
 
 
-  script(src="static/js/main.js")
-  
+  //- script(src="static/js/lib/countUp.min.js")
+  //- script.
+  //-   import {CountUp} from '/static/js/lib/countUp.min.js'
+
+  script(type="module" src="static/js/main.js")

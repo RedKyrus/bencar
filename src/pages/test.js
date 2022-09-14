@@ -1,0 +1,1 @@
+export let xx = 1000;

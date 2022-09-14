@@ -9,7 +9,7 @@
   .sidebar-container{
     position: absolute;
     top: 250px;
-    left: 620px;
+    left: 580px;
     width: fit-content;
     // .sidebar-ul{
     //   //transform: translateY(-40%);
@@ -19,11 +19,14 @@
   .sidebar-ul{
     text-align: center;
     li{
+      // line-height: 0;
       // margin-bottom: 12px;
       &:nth-of-type(1){
-        margin-bottom: 16px;
+        // margin-bottom: 16px;
       }
-
+      img{
+        display: block;
+      }
     }
   }
 }
