@@ -103,6 +103,9 @@
 }
 
 
+
+
+
 .intro-area{
   position: absolute;
   top: 114px;
@@ -133,6 +136,15 @@
   }
 }
 
+
+// @media (min-width:1921px) {
+//   .intro-bg-area{
+//     img{
+      
+//     }
+//     // filter: blur(20px);
+//   }
+// }
 
 .sect-event{
   padding: 0;
@@ -397,6 +409,7 @@
         color: #5960b8;
         font-size: 25px;
         margin-top: 21px;
+        word-break: keep-all;
       }
       .info-price{
         padding-left: 42px;
