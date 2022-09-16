@@ -297,6 +297,9 @@ $searchBorderR: 40px;
         color: #fff;
         font-size: 22px;
         // font-weight: 400;
+        &:hover{
+          text-shadow: 2px 2px 10px #000;
+        }
       }
     }
   }
@@ -313,8 +316,10 @@ $searchBorderR: 40px;
 
 @media (max-width:$mobileBaseMaxSize) {
   .header{
-    padding-top: 0;
-    padding-bottom: toRem(40);
+    padding-top: toRem(40);
+    // padding-bottom: toRem(44);
+    padding-bottom: 0;
+    height: toRem(210);
 
     .header-top{
       padding-bottom: toRem(36);
@@ -330,6 +335,7 @@ $searchBorderR: 40px;
       width: 100%;
       display: block;
       padding: 0;
+
     }
   }
 
@@ -417,14 +423,25 @@ $searchBorderR: 40px;
       width: toRem(150);
     }
   }
+  .header-container{
+    .top-logo{
+      width: toRem(200);
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
 
   .top-menu-content{
-    padding-top: toRem(38);
+    padding-top: toRem(30);
     justify-content: center;
     .top-menu-ul{
-      
+      width: 90%;
+      justify-content: space-between;
       &>li{
-        padding:0 toRem(16);
+        padding:0 toRem(0);
         &::after{
           content: none;
         }
