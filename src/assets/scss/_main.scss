@@ -80,16 +80,16 @@
       position: absolute;
       z-index: -100;
       content: "";
-      width: 110%;
-      height: 110%;
+      width: 100%;
+      height: 120%;
       left: 50%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
       background:url("../../img/main/main_intro_bg.jpg"), #aaa;
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 100% 100%;
-      filter: blur(14px);
+      background-size: 110% 110%;
+      filter: blur(7px);
       background-blend-mode: multiply;
     }
   }
