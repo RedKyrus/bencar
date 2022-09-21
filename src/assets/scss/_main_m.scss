@@ -86,22 +86,40 @@
 
 
   //////////////
-
-  .intro-bg-area{
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    img{
+  .sect-intro{
+    .intro-bg-area{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 280%;
+      .img-bg{
+        // padding-top: 200px;
+        // overflow: hidden;
+        img{
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 320%;
+        }
+      }
+      .img-car{
+        top: auto;
+        bottom: toRem(60);
+        width: 80%;
+        img{
+          top: auto;
+          left: 0;
+          width: 100%;
+          
+        }
+      }
+      
     }
   }
 
   .intro-area{
     position: absolute;
-    top: toRem(320);
+    top: toRem(270);
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -111,6 +129,7 @@
     .intro-title-box{
       p{
         text-align: center;
+        text-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.3);
       }
       .title-sub{
         font-size: toRem(30);
@@ -121,6 +140,7 @@
       }
     }
     .benz-logo-box{
+      display: none;
       margin: 0 auto;
       margin-top: toRem(35);
       width: 20%;
