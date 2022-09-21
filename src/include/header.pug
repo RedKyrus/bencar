@@ -13,7 +13,7 @@ mixin searchList(keyword)
 
 
 
-header.header 
+header.header.header-pos-absolute
   //- div.header-bg
 
   div.header-top
@@ -59,7 +59,8 @@ header.header
     //-    img(src=`${imgPath}/common/logo_top.png`, alt="탑로고" class="mobile-hidden")
     //-    img(src=`${imgPath}/common/logo_top_color.png`, alt="탑로고 모바일" class="pc-hidden")
     .top-logo
-      img(src=`${imgPath}/common/top_logo.png`, alt="로고")
+      a(href=`${basePath}index.html`)
+        img(src=`${imgPath}/common/top_logo.png`, alt="로고")
 
     nav.top-menu-content
       ul.top-menu-ul

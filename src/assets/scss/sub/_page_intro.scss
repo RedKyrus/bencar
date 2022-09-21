@@ -11,35 +11,94 @@
   .sect{
     padding: 0;
     .sect-container{
-      width: auto;
+      width: 1356px;
+      margin: 0 auto;
     }
   }
 
   .intro-sect-cont01{
-    padding-top: 20px;
+    padding-top: 240px;
+    padding-bottom: 130px;
+    background-color: #c5d8d6;
   }
-  .intro-sect-partner{
-    padding-bottom: 100px;
+  .intro-sect-cont02{
+    position: relative;
+    .sect-content{
+      max-width: 1920px;
+      width: 100%;
+      background:url("../../img/sub/intro/page_intro_cont02_bg.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0 auto;
+    }
+    
+    
+    &::after{
+      z-index: -100;
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background:url("../../img/sub/intro/page_intro_cont02_bg.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 110% 110%;
+      filter: blur(5px);
+    }
+  }
+  .intro-sect-cont03{
+    padding-top: 110px;
+    padding-bottom: 130px;
+    background-color: #c5d8d6;
   }
 }
 
 .intro-sect-cont01{
-  .sect-content{ 
-  }
-}
-.intro-sect-partner{
   
   .sect-content{
     
   }
+  .cont-area{
+    display: flex;
+    width: 1356px;
+    justify-content: center;
+    align-items: flex-end;
+    column-gap: 60px;
+    .item01{
+
+    }
+    .item02{
+      padding-bottom: 30px;
+    }
+  }
+}
+
+
+.intro-sect-cont02{
+  
+  .sect-content{
+    
+  }
+  
+}
+
+
+.intro-sect-cont03{
+  
+  .sect-content{
+    
+  }
+  
 }
 
 @media (max-width:$mobileBaseMaxSize){
   .page-sub-intro{
-    .sect:not(.intro-sect-cont03){
-      background: none;
-      padding: 0;
-      height: auto;
+    .sect{
+      .sect-container{
+        width: 100%;
+      }
     }
     .sect-content{
       img{
@@ -47,7 +106,51 @@
       }
     }
 
+
+    .intro-sect-cont01{
+      padding-top: toRem(300);
+      padding-bottom: toRem(120);
+    }
+
+    .intro-sect-cont03{
+      padding-top: toRem(100);
+      padding-bottom: toRem(100);
+    }
+
   }
+
+
+  
+
+  .intro-sect-cont01{
+  
+    .sect-content{
+      
+    }
+    .cont-area{
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      column-gap:0;
+      .item01{
+  
+      }
+      .item02{
+        padding-bottom: toRem(20);
+      }
+    }
+  }
+
+  .intro-sect-cont03{
+  
+    .sect-content{
+      width: 80%;   
+      margin: 0 auto;
+    }
+    
+  }
+  
 }
 
 

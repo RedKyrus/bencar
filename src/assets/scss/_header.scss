@@ -39,6 +39,17 @@
   position: absolute;
 }
 
+
+.header-style-main{
+  .top-logo a>img{
+    filter: none;
+  }
+  .top-menu-content .top-menu-ul>li a{
+    color: #fff;
+  }
+    
+}
+
 $searchBorderR: 40px;
 
 .search-area{
@@ -231,7 +242,8 @@ $searchBorderR: 40px;
 
 .top-logo{
   // padding-top: 4px;
-  &>img{
+  a>img{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(1399%) hue-rotate(204deg) brightness(85%) contrast(103%);
     display: block;
   }
   .logo-txt{
@@ -294,7 +306,7 @@ $searchBorderR: 40px;
       }
 
       a{
-        color: #fff;
+        color: #091c58;
         font-size: 22px;
         // font-weight: 400;
         &:hover{

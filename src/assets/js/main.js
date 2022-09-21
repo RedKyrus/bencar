@@ -4,7 +4,9 @@ import {CountUp} from './lib/countUp.min.js'
 let onready = () =>{
 
 
-  headerSet();
+  // headerSet();
+
+  mainPageHeaderStyleSet();
 
   countUpSet();
 
@@ -50,4 +52,12 @@ function headerSet(){
 
 }
 
-  
+
+
+function mainPageHeaderStyleSet(){
+  let header = document.querySelector(".header");
+
+  if(header === null) return;
+
+  header.classList.add("header-style-main");
+}
