@@ -252,13 +252,13 @@
           display: block;
           width: 67%;
           margin: 0 auto;
-          margin-top: 20px;
+          margin-top: toRem(20);
           background-color: #888cbf;
-          border-radius: 22px;
-          font-size: 25px;
+          border-radius: toRem(22);
+          font-size: toRem(36);
           font-weight: 600;
-          padding-top: 10px;
-          padding-bottom: 12px;
+          padding-top: toRem(22);
+          padding-bottom: toRem(24);
         }
       }
     }
