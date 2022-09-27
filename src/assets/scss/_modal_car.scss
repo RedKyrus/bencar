@@ -60,9 +60,11 @@
     display: flex;
     // flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
     column-gap: 10px;
     row-gap: 14px;
+    // grid-template-columns: repeat(3, 1fr);
+    padding: 0 30px;
     li{
       background-color: #ececec;
       border-radius:  0 0 12px 12px;
@@ -256,13 +258,14 @@ $keyAngle: 52deg;
     .car-list-ul{
       // width: 100%;
       margin-top: toRem(26);
-      gap: toRem(14);
+      // gap: toRem(14);
       overflow-y: auto;
       height: 72vw;
       // background-color: red;
+      // grid-template-columns: repeat(2, 1fr);
       li{
         // mix-blend-mode: multiply;
-        width: 44%;
+        width: 48%;
         border-radius:  0 0 toRem(12) toRem(12);
         a{
           
