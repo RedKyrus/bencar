@@ -4,6 +4,12 @@
   background-position: top center;
 }
 
+.intro-top-space{
+  width: 100%;
+  height: 140px;
+  background-color: #c5d8d6;
+}
+
 .page-sub-intro{
   // .sect-container{
   //   width: 100%
@@ -17,7 +23,7 @@
   }
 
   .intro-sect-cont01{
-    padding-top: 240px;
+    padding-top: 100px;
     padding-bottom: 130px;
     background-color: #c5d8d6;
   }
@@ -94,6 +100,9 @@
 }
 
 @media (max-width:$mobileBaseMaxSize){
+  .intro-top-space{
+    height: toRem(210);
+  }
   .page-sub-intro{
     .sect{
       .sect-container{
@@ -108,7 +117,7 @@
 
 
     .intro-sect-cont01{
-      padding-top: toRem(300);
+      padding-top: toRem(80);
       padding-bottom: toRem(120);
     }
 
