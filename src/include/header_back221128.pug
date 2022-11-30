@@ -61,36 +61,15 @@ header.header.header-pos-absolute
     .top-logo
       a(href=`${basePath}index.html`)
         img(src=`${imgPath}/common/top_logo.png`, alt="로고")
-      button(class="btn-hamburger pc-hidden")
-        img(src=`${imgPath}/common/btn_hamburger.png`, alt="햄버거 버튼")
 
     nav.top-menu-content
       ul.top-menu-ul
-        li: a(href=`${basePath}index.html` class="pc-hidden") 홈
-        li: a(href=`${basePath}intro/intro.html`) 장기렌트리스안내
-        li: a(href="#none") 벤츠
-        li: a(href="#none") BMW
-        li: a(href="#none") 아우디
+        li: a(href=`${basePath}intro/intro.html`) 장기렌트안내
+        li: a(class="fn-open-modal-quote") 개인벤츠리스
+        li: a(class="fn-open-modal-quote") 법인벤츠리스
         li: a(class="fn-open-modal-car-release") 즉시출고차량
         //- li: a(href=`https://www.youtube.com/channel/UC_LntEPC8s3h_QVESEuc1jQ` target="_blank") 유튜브 리뷰
 
-    
-
-
-  div(class="mobile-side-menu pc-hidden")
-    .btn-close 
-    div.menu-title 
-      p 카테고리
-    .side-menu-cont
-      .text-box 
-        p 벤카의 수입차 비교견적
-        p 개인 맞춤 제안까지 해드립니다.
-      ul.side-menu-ul
-        li
-          a 
-            img(src="", alt="아이콘")
-            p 전화문의
-          
-
-
-
+    //- div.btn-box-branch
+    //-   button(type="button" class="btn-branch fn-open-modal-branch") 
+    //-     img(src=`${imgPath}/common/btn_branch.png`, alt="지사모집")

@@ -12,15 +12,22 @@ main(class="wrap-container page-sub-intro")
 
   section(class="sect intro-sect-cont02")
     div(class="sect-container")
-      div(class="sect-content")
-        img(src=`${imgPath}/sub/intro/page_intro_cont02.png`, alt="이미지")
+      div(class="sect-content cont-area")
+        div.cont-item.item01
+          img(src=`${imgPath}/sub/intro/page_intro_cont02_1.png`, alt="이미지")
+        div.cont-item.item02
+          img(src=`${imgPath}/sub/intro/page_intro_cont02_2.png`, alt="이미지")
+        //- img(src=`${imgPath}/sub/intro/page_intro_cont02.png`, alt="이미지")
+        
   
   section(class="sect intro-sect-cont03")
     div(class="sect-container")
       div(class="sect-content")
-        img(src=`${imgPath}/sub/intro/page_intro_cont03.png`, alt="이미지")
+        img(src=`${imgPath}/sub/intro/page_intro_cont03.png`, alt="이미지" class="mobile-hidden")
+        img(src=`${imgPath}/sub/intro/page_intro_cont03_m.png`, alt="이미지" class="pc-hidden")
 
   section(class="sect intro-sect-cont04")
     div(class="sect-container")
       div(class="sect-content")
-        img(src=`${imgPath}/sub/intro/page_intro_cont04.jpg`, alt="이미지")
+        .img-box
+          img(src=`${imgPath}/sub/intro/page_intro_cont04.jpg`, alt="이미지")

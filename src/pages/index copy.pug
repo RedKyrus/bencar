@@ -139,20 +139,18 @@ block content
         div.intro-bg-area
           div.img-bg
             img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
-          //- div.img-car
-          //-   img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
-          div 
+          div.img-car
             img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
-          div 
-            img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
-          div 
-            img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
-
 
         div.intro-area 
           .intro-title-box 
             p.title-sub 빠른견적, 빠른출고 최적화된 견적을 받아보세요!
-            p.title-main 수입차 전문 렌트, 리스<br>즉시출고 문의 주세요!
+            p.title-main 벤츠 전문리스 <br> 즉시출고 문의 주세요!
+          .benz-logo-box 
+            img(src=`${imgPath}/main/benz_logo.png`, alt="이미지")
+
+
+
 
         div.intro-info-bar 
           ul.info-ul
@@ -188,51 +186,121 @@ block content
                 p.title-sub 문의주세요!
                 button(type="button" class="btn fn-open-modal-quote") 견적문의하기
 
-  
-    section(class="sect sect-ad")
-      div(class="sect-container")
-        div.ad
-        p.title 다른 차족 격적 문의하기
-        div.text
-          p 수입차 외에 다른 차종도 문의해주세요.
-          p 모든 차종 상담합니다~
-        p.text-btn 다른 차종 문의하기
-
-    section(class="sect sect-carlist")
-      div(class="sect-container")
-        div.title-box
-          p 수입차량 특가
-          p 벤츠, BMW, 아우디 등 수입차 특가차량을 만나보세요 
-
-        div.car-contents
-          div.car-list
-            div
-              p.title 벤츠
-              div.img-box
-              a(href="") 더보기 +
-            ul 
-              li 
-                div 
-                  img(src="", alt="")
-                div.car-info-box 
-                  p.name GLE
-                  p.price 월 89만원부터
-                div 
-                  p 리스 
-                  p 최저가
-
-
-
-          div.ad-inquiry
-
-
-
           
-      
         
+    section(class="sect sect-cartype")
+      div(class="sect-container")
+        .title-area
+          h3.title-main 벤츠차량
+
+        div(class="car-type-area")
+          h4.cartype-title Hatchback 
+          ul.car-type-ul
+            +carInfobox("A-Class Hatchback", 145000000,3500000,"01_Hatchback/A_Class_Hatchback.png")
+            
+          h4.cartype-title Sedan
+          ul.car-type-ul
+            +carInfobox("A-Class Sedan", 145000000,3500000,"02_Sedan/A_Class_Sedan.png")
+            +carInfobox("C-Class Sedan", 145000000,3500000,"02_Sedan/C_Class_Sedan.png")
+            +carInfobox("E-Class Sedan", 145000000,3500000,"02_Sedan/E_Class_Sedan.png")
+            +carInfobox("EQS Sedan", 145000000,3500000,"02_Sedan/EQS_Sedan.png")
+            +carInfobox("S-Class Sedan", 145000000,3500000,"02_Sedan/S_Class_Sedan.png")
+            +carInfobox("S-Class Sedan Long", 145000000,3500000,"02_Sedan/S_Class_Sedan_Long.png")
+
+          h4.cartype-title SUV
+          ul.car-type-ul
+            +carInfobox("EQA SUV", 1300,3500000,"03_SUV/EQA_SUV.png")
+            +carInfobox("EQB SUV", 145000000,3500000,"03_SUV/EQB_SUV.png")
+            +carInfobox("G-Class SUV", 145000000,3500000,"03_SUV/G_Class_SUV.png")
+            +carInfobox("GLA SUV", 145000000,3500000,"03_SUV/GLA_SUV.png")
+            +carInfobox("GLB SUV", 145000000,3500000,"03_SUV/GLB_SUV.png")
+            +carInfobox("GLC Coupe", 145000000,3500000,"03_SUV/GLC_Coupe.png")
+            +carInfobox("GLC SUV", 145000000,3500000,"03_SUV/GLC_SUV.png")
+            +carInfobox("GLE Coupe", 145000000,3500000,"03_SUV/GLE_Coupe.png")
+            +carInfobox("GLE SUV", 145000000,3500000,"03_SUV/GLE_SUV.png")
+            +carInfobox("GLS SUV", 145000000,3500000,"03_SUV/GLS_SUV.png")
+
+          h4.cartype-title COUPE
+          ul.car-type-ul
+            +carInfobox("C-Class Coupe", 145000000,3500000,"04_Coupe/C_Class_Coupe.png")
+            +carInfobox("CLA Coupe", 145000000,3500000,"04_Coupe/CLA_Coupe.png")
+            +carInfobox("CLS Coupe", 145000000,3500000,"04_Coupe/CLS_Coupe.png")
+            +carInfobox("E-Class Coupe", 145000000,3500000,"04_Coupe/E_Class_Coupe.png")
+            +carInfobox("Mercedes_AMG Coupe", 145000000,3500000,"04_Coupe/Mercedes_AMG_GT_4_Door_Coupe.png")
+
+          h4.cartype-title Cabriolet & Roadster
+          ul.car-type-ul
+            +carInfobox("C-Class Cabriolet", 145000000,3500000,"05_Cabriolet_Roadster/C_Class_Cabriolet.png")
+            +carInfobox("E-Class Cabriolet", 145000000,3500000,"05_Cabriolet_Roadster/E_Class_Cabriolet.png")
+   
+            
+        
+        .cartype-notice 
+          p.notice-title 유의사항
+          p.notice-text ※ 차량 이미지는 실제와 다를 수 있으며, 일부 기능, 장비 및 색상은 차이가 있을 수 있습니다. 
+
+           
+
+    section(class="sect sect-advantage")
+      div(class="sect-container")
+        div.advantage-top
+          p.title 벤카의 장기렌트/리스 장점
+          div.text
+            p 벤카에서는 최대한 빠른 출고로 도와드리고 있습니다.
+            p 세금및 비용처리 혜택과 무보증 혜택까지 최대한 맞춰드립니다.
+        ul.advantage-ul
+          li
+            img(src=`${imgPath}/main/advantage_icon01.png`, alt="아이콘")
+            p 저렴한 딜러가보장
+          li
+            img(src=`${imgPath}/main/advantage_icon02.png`, alt="아이콘")
+            p 세금 및 비용 절감
+          li
+            img(src=`${imgPath}/main/advantage_icon03.png`, alt="아이콘")
+            p 무보증 가능!
+          li
+            img(src=`${imgPath}/main/advantage_icon04.png`, alt="아이콘")
+            p 비용처리가능
 
 
 
+    section(class="sect sect-consult")
+      div(class="sect-container")
+        div.consult-area
+          div.consult-box.consult-katalk.mobile-hidden
+            div.icon 
+              img(src=`${imgPath}/common/icon_circle_katalk.png`, alt="아이콘")
+            p.ment 카카오톡 상담 진행 중
+          div.consult-box.consult-tel
+            div.tel-title
+              div.icon
+                img(src=`${imgPath}/common/icon_consult.png`, alt="아이콘")
+              p.title 벤카장기렌트, 리스 전문
+            p.tel-cont TEL: 1533-3753 
+              span (연중무휴상담신청)
 
+
+
+  //- mixin modalListFrame(modalName, imgName)
+  //-   li(class=`modal-list-target modal-list-${modalName}`)
+  //-     button(type="button" class="btn-close fn-close-modal-list")
+  //-     .img-area
+  //-       img(src=`${imgPath}/modal/pop/${imgName}`)
+      
+  //-     button(type="button" class="btn-car-quote fn-close-modal-list-all fn-open-modal-quote") 문의하기
+
+
+
+  //- //이달의 즉시출고차량 팝업(포터/봉고/g90)
+  //- div.modal-wrap-list
+  //-   ul.modal-list-ul
+  //-     +modalListFrame("porter-bongo",'pop_porter_bongo.png')
+  //-     +modalListFrame("g90",'pop_g90.png')
+            
+
+
+  //- script(src="static/js/lib/countUp.min.js")
+  //- script.
+  //-   import {CountUp} from '/static/js/lib/countUp.min.js'
 
   script(type="module" src=`${basePath}/static/js/main.js`)

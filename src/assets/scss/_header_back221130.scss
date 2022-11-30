@@ -1,4 +1,4 @@
-.header {
+.header{
   width: 100%;
   text-align: center;
   // padding-top: 18px;
@@ -6,16 +6,16 @@
   height: 115px;
   position: relative;
   z-index: 1;
-  // background-color: transparent;
+// background-color: transparent;
   border-bottom: 1px solid #fff;
   display: flex;
   justify-items: center;
 
-  .header-top {
+  .header-top{
     display: none;
     border-bottom: 1px solid #88859f;
     padding-bottom: 18px;
-    .top-content {
+    .top-content{
       width: $baseSectWithSize;
       margin: 0 auto;
       display: flex;
@@ -23,7 +23,7 @@
     }
   }
 
-  .header-container {
+  .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,58 +32,61 @@
     padding-top: 8px;
     padding-left: 28px;
   }
+
 }
 
-.header-pos-absolute {
+.header-pos-absolute{
   position: absolute;
 }
-@media (min-width: ($mobileBaseMaxSize + 1)) {
-  .header-style-main {
-    .top-logo a > img {
-      filter: none;
+
+
+.header-style-main{
+  .top-logo a>img{
+    filter: none;
+  }
+  .top-menu-content .top-menu-ul>li{
+    a{
+      color: #fff;
     }
-    .top-menu-content .top-menu-ul > li {
-      a {
-        color: #fff;
-      }
-      @media (hover: hover) {
-        a:hover {
-          border-color: #fff;
-        }
+    @media (hover : hover){
+      a:hover{
+        border-color: #fff;
       }
     }
   }
+    
 }
 
 $searchBorderR: 40px;
 
-.search-area {
+.search-area{
   padding-right: 60px;
   position: relative;
   margin: 0 auto;
-  * {
+  *{
     color: #fff;
     letter-spacing: -1.2;
+    
   }
-  .search-bar {
+  .search-bar{
     // width: 500px;
     overflow: hidden;
     display: flex;
     height: 42px;
     // justify-content: space-between;
     justify-content: center;
-    * {
-      font-family: "Noto Sans KR", sans-serif;
+    *{
+      font-family: 'Noto Sans KR', sans-serif;
     }
   }
-  .search-cont {
+  .search-cont{
     border: 2px solid #84f2ff;
     border-radius: $searchBorderR 0 0 $searchBorderR;
     overflow: hidden;
     display: flex;
   }
 
-  .bar-rank {
+  .bar-rank{
     width: 242px;
     // flex-shrink: 0;
     // flex-grow: 0;
@@ -92,17 +95,17 @@ $searchBorderR: 40px;
     padding-left: 24px;
     position: relative;
     cursor: pointer;
-
-    p {
+    
+    p{
       font-weight: 500;
     }
-    .rank-one {
+    .rank-one{
       margin-left: 22px;
       // width: 138px;
       flex-grow: 1;
       text-align: left;
     }
-    &::after {
+    &::after{
       content: "";
       background-color: #fff;
       width: 1px;
@@ -114,7 +117,7 @@ $searchBorderR: 40px;
     }
   }
 
-  .in-search {
+  .in-search{
     width: 220px;
     font-size: 16px;
     font-weight: 400;
@@ -122,7 +125,7 @@ $searchBorderR: 40px;
     padding-left: 16px;
     // width: 200px;
     // flex-grow: 1;
-    &::placeholder {
+    &::placeholder{
       color: #fff;
       font-size: 15px;
     }
@@ -130,8 +133,8 @@ $searchBorderR: 40px;
       -webkit-box-shadow: 0 0 0 1000px white inset;
       box-shadow: 0 0 0 1000px white inset;
     }
-  }
-  .btn-search {
+  }   
+  .btn-search{
     // transform: translateX(2px);
     display: flex;
     justify-content: center;
@@ -141,26 +144,26 @@ $searchBorderR: 40px;
     flex-grow: 0;
     background-color: #84f2ff;
     border-radius: 0 $searchBorderR $searchBorderR 0;
-    img {
+    img{
       width: fit-content;
     }
   }
 
   //랭크 쪽
-  .search-rank {
+  .search-rank{
     z-index: 2;
     position: absolute;
     top: 50px;
     left: 10px;
     display: none;
-    &.rank-show {
+    &.rank-show{
       display: block;
     }
 
-    .rank-box {
+    .rank-box{
       // position: relative;
       // z-index: 1;
-      * {
+      *{
         text-align: left;
         font-weight: 600;
       }
@@ -172,7 +175,7 @@ $searchBorderR: 40px;
       padding-left: 14px;
       padding-bottom: 20px;
 
-      .icon-triangle {
+      .icon-triangle{
         width: 50px;
         height: 18px;
         overflow: hidden;
@@ -180,7 +183,7 @@ $searchBorderR: 40px;
         top: -16px;
         left: 2px;
         transform: scaleX(0.7);
-        &::after {
+        &::after{
           content: "";
           width: 50px;
           height: 50px;
@@ -193,15 +196,14 @@ $searchBorderR: 40px;
         }
       }
 
-      .btn-close-rank {
+      .btn-close-rank{
         position: absolute;
         top: 15px;
         right: 8px;
         padding: 6px;
         width: 22px;
         height: 0;
-        &::after,
-        &::before {
+        &::after,&::before{
           content: "";
           // background-color: #110a3e;
           background-color: #6b5f5f;
@@ -212,15 +214,16 @@ $searchBorderR: 40px;
           left: 0;
           border-radius: 3px;
         }
-        &::after {
+        &::after{
           transform: rotate(45deg);
         }
-        &::before {
+        &::before{
           transform: rotate(-45deg);
         }
       }
 
-      .top-ment {
+
+      .top-ment{
         color: #110a3e;
         font-size: 17px;
         font-weight: 600;
@@ -232,8 +235,8 @@ $searchBorderR: 40px;
         padding-right: 14px;
         border-radius: 10px;
       }
-      .rank-ul {
-        li {
+      .rank-ul{
+        li{
           color: #110a3e;
           font-size: 15px;
           padding-top: 15px;
@@ -243,24 +246,24 @@ $searchBorderR: 40px;
   }
 }
 
-.top-logo {
+
+.top-logo{
   // padding-top: 4px;
-  a > img {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(1399%) hue-rotate(204deg) brightness(85%)
-      contrast(103%);
+  a>img{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(1399%) hue-rotate(204deg) brightness(85%) contrast(103%);
     display: block;
   }
-  .logo-txt {
+  .logo-txt{
     color: #fff;
     text-align: left;
-    .logo-txt-main {
-      font-family: "Montserrat", sans-serif;
+    .logo-txt-main{
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 30px;
       letter-spacing: 0;
     }
-    .logo-txt-sub {
-      font-family: "NanumSquare", sans-serif;
+    .logo-txt-sub{
+      font-family: 'NanumSquare', sans-serif;
       font-weight: 500;
       font-size: 18px;
       margin-top: 2px;
@@ -269,24 +272,24 @@ $searchBorderR: 40px;
   }
 }
 
-.header-logo {
+.header-logo{
   padding-top: 4px;
-  & > img {
+  &>img{
     display: block;
   }
 }
 
-.top-menu-content {
+.top-menu-content{
   display: flex;
   align-items: center;
   // padding-top: 10px;
-  .top-menu-ul {
+  .top-menu-ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    & > li {
+    &>li{
       position: relative;
-      padding: 0 20px;
+      padding:0 20px;
       // &::after{
       //   position: absolute;
       //   content: "";
@@ -299,195 +302,196 @@ $searchBorderR: 40px;
       //   //border-right: 1px solid #fff;
       //   border-right: none;
       // }
-      &:last-of-type {
+      &:last-of-type{
         // padding-right: 0;
-        &::after {
+        &::after{
           content: none;
         }
       }
-      &:first-of-type {
+      &:first-of-type{
         padding-left: 0;
       }
 
-      a {
-        // color: #091c58;
-        color: #212121;
+      a{
+        color: #091c58;
         font-size: 22px;
         display: block;
-        cursor: pointer;
-        padding: 0px 20px;
+        cursor: pointer;        
+        padding:0px 20px;
         padding-top: 8px;
         padding-bottom: 6px;
         // line-height: 1.4;
         // font-weight: 400;
         border: 1px solid transparent;
-        &:hover {
+        &:hover{
           // text-shadow: 2px 2px 10px #000;
         }
       }
-      @media (hover: hover) {
-        a:hover {
+      @media (hover : hover){
+        a:hover{
           // text-shadow: 2px 2px 10px #000;
           border: 1px solid #091c58;
           border-radius: 22px;
+
         }
       }
     }
   }
 
-  .btn-box-branch {
-    button {
+  .btn-box-branch{
+    button{
       overflow: hidden;
       border-radius: 50%;
       background-color: salmon;
     }
+    
   }
 }
 
-@media (max-width: $mobileBaseMaxSize) {
-  .header {
-    background-color: #fff;
+@media (max-width:$mobileBaseMaxSize) {
+  .header{
     padding-top: toRem(40);
     // padding-bottom: toRem(44);
     padding-bottom: 0;
-    height: toRem(286);
-    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.2);
+    height: toRem(210);
 
-    .header-top {
+    .header-top{
       padding-bottom: toRem(36);
-      .top-content {
+      .top-content{
         width: 100%;
         padding: 0 toRem(38);
         padding-top: toRem(38);
         flex-direction: column;
       }
     }
-
-    .header-container {
+    
+    .header-container{
       width: 100%;
       display: block;
-      padding: 0 toRem(40);
+      padding: 0;
+
     }
   }
 
   $searchBorderR: toRem(30);
+  
 
-  .search-area {
+  .search-area{
     margin-top: toRem(30);
     padding-right: 0;
     width: 96%;
-    .search-bar {
+    .search-bar{
       width: auto;
       height: toRem(80);
     }
-    .search-cont {
+    .search-cont{
       border-width: 3px;
       border-radius: $searchBorderR 0 0 $searchBorderR;
       flex-grow: 1;
     }
-
-    .bar-rank {
+  
+    .bar-rank{
       display: none;
     }
-
-    .in-search {
-      font-size: toRem(28);
+  
+    .in-search{
+      font-size: toRem(28);      
       padding-left: toRem(22);
       // width: 200px;
       flex-grow: 1;
-      &::placeholder {
+      &::placeholder{
         font-size: toRem(24);
       }
-    }
-    .btn-search {
+    }   
+    .btn-search{
       // transform: translateX(2px);
       margin-left: -1px;
       width: toRem(80);
       border-radius: 0 $searchBorderR $searchBorderR 0;
 
-      img {
+      img{
         width: 54%;
       }
     }
-
+  
     //랭크 쪽
-    .search-rank {
-      &.rank-show {
+    .search-rank{
+      &.rank-show{
         display: none;
       }
+
     }
   }
 
-  .top-logo {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    img {
+  .top-logo{
+    // padding-top: toRem(24);
+    // padding-bottom: toRem(30);
+    // background-color: #fff;
+    img{
       //display: block;
       width: toRem(140);
     }
-    .logo-txt {
+    .logo-txt{
       text-align: center;
+      
+      .logo-txt-main{
 
-      .logo-txt-main {
         font-size: toRem(50);
+
       }
-      .logo-txt-sub {
+      .logo-txt-sub{
+
         font-size: toRem(40);
         margin-top: toRem(14);
+
       }
     }
   }
 
-  .header-logo {
+  .header-logo{
     padding-top: toRem(24);
     padding-bottom: toRem(30);
     background-color: #fff;
-    img {
+    img{
       //display: block;
       width: toRem(150);
     }
   }
-  .header-container {
-    .top-logo {
-      // width: toRem(200);
+  .header-container{
+    .top-logo{
+      width: toRem(200);
       margin: 0 auto;
-      img {
+      img{
         width: 100%;
       }
     }
   }
+  
 
-  .top-menu-content {
-    padding-top: toRem(60);
-    justify-content: start;
-    width: 100%;
-    overflow-x: auto;
-
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    .top-menu-ul {
-      min-width: max-content;
-      justify-content: baseline;
-      padding: 0 toRem(0);
-      & > li {
-        padding: 0 toRem(30);
-        &::after {
+  .top-menu-content{
+    padding-top: toRem(30);
+    justify-content: center;
+    .top-menu-ul{
+      width: 90%;
+      justify-content: space-between;
+      &>li{
+        padding:0 toRem(0);
+        &::after{
           content: none;
         }
-        a {
-          font-size: toRem(36);
-          padding: 0 toRem(14);
-          min-width: fit-content;
+        a{
+          font-size: toRem(26);
+          padding: 0;
         }
       }
     }
   }
 
-  .btn-box-branch {
+  .btn-box-branch{
     display: none;
   }
 }
+
+
+
+
