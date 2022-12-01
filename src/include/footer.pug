@@ -4,26 +4,30 @@ mixin snsicon(altName, imgPath, aHref="#none", aTarget="_self")
 
 
 footer.footer 
+  div.footer-info
+    div.copy-text-cont
+      p.company 퍼니라인&nbsp;
+      p 대표자&nbsp;&nbsp;&nbsp; 김은정 &nbsp;&nbsp; | &nbsp;&nbsp; 통신판매업신고번호&nbsp;&nbsp;&nbsp; 제2022-서울강남-05355호 &nbsp;&nbsp; | &nbsp;&nbsp; 사업자등록번호&nbsp;&nbsp;&nbsp; 102-20-95096
+      p 주소&nbsp;&nbsp;&nbsp; 서울시 강남구 테헤란로82길 15 2층 248호(디아이타워)
+  
+  div.footer-consult
+    div.consult-box.consult-katalk.mobile-hidden
+      div.icon 
+        img(src=`${imgPath}/common/icon_circle_katalk.png`, alt="아이콘")
+      p.ment 카카오톡 상담 진행 중
+    div.consult-box.consult-tel
+      div.tel-title
+        div.icon
+          img(src=`${imgPath}/common/icon_consult.png`, alt="아이콘")
+        p.title 벤카장기렌트, 리스 전문
+      p.tel-cont TEL: 1533-3753 
+        span (연중무휴상담신청)
+
   div.footer-menu
     ul.footer-menu-ul
       li
         button(class="fn-open-modal-agree" type="button") 개인정보 취급방침    
       li
         button(class="fn-open-modal-terms" type="button") 이용약관
-  div.footer-info
-    div.copy-text-cont
-      p.company 유어프렌드&nbsp;
-      p 대표자&nbsp;&nbsp;&nbsp; 이정환
-      p 주소&nbsp;&nbsp;&nbsp; 경기도 화성시 메타폴리스로 22
-      p 사업자등록번호&nbsp;&nbsp;&nbsp; 132-26-00573
-      p 통신판매업신고번호&nbsp;&nbsp;&nbsp; 
-      p.copyright COPYRIGHT &COPY SAMSUNGCARDPARTNER CORP. ALL RIGHTS RESERVED.
 
-    //- div.footer-snsicon-cont
-    //-   ul.snsicon-ul
-    //-     +snsicon("카톡",`${imgPath}/common/icon_circle_katalk.png`)
-    //-     +snsicon("블로그",`${imgPath}/common/icon_circle_blog.png`)
-    //-     +snsicon("유뷰브",`${imgPath}/common/icon_circle_youtube.png`, `https://www.youtube.com/channel/UC_LntEPC8s3h_QVESEuc1jQ`, `_blank`)
-    //-     +snsicon("인스타그램",`${imgPath}/common/icon_circle_instagram.png`)
-        
-        
+  p.copyright COPYRIGHT &COPY BENCAR CORP. ALL RIGHTS RESERVED.

@@ -418,13 +418,16 @@ $searchBorderR: 40px;
     }
   }
 
-  .top-logo {
+  .logo-area {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  .top-logo {
+    // display: block;
+    margin: 0;
     img {
-      //display: block;
-      width: toRem(140);
+      width: toRem(184);
     }
     .logo-txt {
       text-align: center;
@@ -438,6 +441,11 @@ $searchBorderR: 40px;
       }
     }
   }
+  .btn-hamburger {
+    img {
+      width: toRem(49);
+    }
+  }
 
   .header-logo {
     padding-top: toRem(24);
@@ -446,15 +454,6 @@ $searchBorderR: 40px;
     img {
       //display: block;
       width: toRem(150);
-    }
-  }
-  .header-container {
-    .top-logo {
-      // width: toRem(200);
-      margin: 0 auto;
-      img {
-        width: 100%;
-      }
     }
   }
 
@@ -490,4 +489,97 @@ $searchBorderR: 40px;
   .btn-box-branch {
     display: none;
   }
+}
+
+.mobile-side-menu {
+  z-index: 30;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  // transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding-top: toRem(50);
+  box-shadow: -4px 0px 8px rgba($color: #000000, $alpha: 0.3);
+
+  .menu-title {
+    text-align: center;
+    font-size: toRem(40);
+  }
+
+  .side-menu-cont {
+    margin-top: toRem(80);
+    padding-top: toRem(64);
+    padding-bottom: toRem(74);
+    padding-left: toRem(42);
+    background-color: #f3efee;
+    .text-box {
+      text-align: left;
+      font-size: toRem(48);
+    }
+
+    .side-menu-ul {
+      display: flex;
+      margin-top: toRem(70);
+      li {
+        &:not(:last-of-type) {
+          margin-right: toRem(196);
+        }
+        a {
+          display: block;
+          text-align: center;
+          img {
+            width: toRem(134);
+          }
+          p {
+            font-size: toRem(30);
+          }
+        }
+      }
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    top: toRem(20);
+    right: toRem(30);
+    width: toRem(48);
+    height: toRem(48);
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: #000;
+      width: toRem(4);
+      height: toRem(48);
+      min-width: 2px;
+      border-radius: 2px;
+      top: 50%;
+      left: 50%;
+      box-shadow: 2px 0px 4px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.off-side-menu {
+  transition: all 0.3s;
+  transform: translateX(100%);
+  border-radius: 10% 0 0 60%;
+  opacity: 0;
+}
+
+.on-side-menu {
+  transition: all 0.3s;
+  transform: translateX(0%);
+  border-radius: 0;
+  opacity: 1;
 }

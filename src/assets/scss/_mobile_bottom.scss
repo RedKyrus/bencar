@@ -10,9 +10,46 @@
   bottom: 0;
   width: 100%;
   // height: toRem(136);
+  box-shadow: 0 -8px 10px rgba($color: #000000, $alpha: 0.2);
   .mobile-btn-ul {
+    height: toRem(134);
     background-color: #fff;
     display: flex;
     justify-content: space-around;
+    padding-top: toRem(22);
+    li {
+      text-align: center;
+      a,
+      button {
+        // height: toRem(84);
+        display: block;
+        img {
+          width: toRem(58);
+        }
+        p {
+          margin-top: toRem(12);
+          font-size: toRem(26);
+          // font-weight: 500;
+        }
+      }
+    }
+    .btn-center {
+      transform: translateY(toRem(-70));
+      display: flex;
+      background-color: #2c327f;
+      border-radius: 50%;
+      width: toRem(164);
+      height: toRem(164);
+      justify-content: center;
+      align-items: center;
+      a {
+        img {
+          width: toRem(80);
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
   }
 }
