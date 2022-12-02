@@ -217,12 +217,7 @@ let rankBoxEvent = () => {
   }
 };
 
-// let sideMenu;
 //사이드 메뉴바
-// let sideMenuSet = () => {
-//   sideMenu = document.querySelector(".target-side-menu");
-// };
-
 let sideMenuOpen = () => {
   const sideMenu = document.querySelector(".target-side-menu");
   const btnOpen = document.querySelector(".fn-open-side-menu");
@@ -235,7 +230,6 @@ let sideMenuOpen = () => {
   btnClose.addEventListener("click", closeSideMenu);
 
   function openSideMenu() {
-    console.log("반응");
     sideMenu.classList.remove("off-side-menu");
     sideMenu.classList.add("on-side-menu");
   }
