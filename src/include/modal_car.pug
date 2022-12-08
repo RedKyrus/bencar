@@ -5,7 +5,7 @@ mixin modalFrameCar(modalName)
         block
 
 mixin popCarInfoBox(carName,imgName, price=0, link="#none")
-  li.ani-sty01: a(href=`${link}`) 
+  li.ani-sty01.fn-close-modal.fn-open-modal-quote: a(href=`${link}`) 
     .img-area
       img(src=`${imgPath}/car/${imgName}`, alt="이미지")
       //- .img-box

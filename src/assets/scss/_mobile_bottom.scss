@@ -54,3 +54,22 @@
     }
   }
 }
+
+.ani-btn {
+  background: linear-gradient(137deg, #c052ee, #7c4efb, #563ba4);
+  box-shadow: inset 0 0 20px rgba($color: #fff, $alpha: 0.4);
+  animation-name: gradientAni;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-size: 100% 1200%;
+}
+
+@keyframes gradientAni {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}

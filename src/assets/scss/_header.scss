@@ -5,6 +5,7 @@
   // padding-bottom: 16px;
   height: 115px;
   position: relative;
+  position: fixed;
   z-index: 1;
   // background-color: transparent;
   border-bottom: 1px solid #fff;
@@ -35,8 +36,9 @@
 }
 
 .header-pos-absolute {
-  position: absolute;
+  // position: absolute;
 }
+
 @media (min-width: ($mobileBaseMaxSize + 1)) {
   .header-style-main {
     .top-logo a > img {
@@ -50,6 +52,25 @@
         a:hover {
           border-color: #fff;
         }
+      }
+    }
+  }
+}
+
+.header-style-white {
+  background-color: #fff;
+  box-shadow: 0 5px 8px rgba($color: #000000, $alpha: 0.2);
+  .top-logo a > img {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(92%) saturate(1399%) hue-rotate(204deg) brightness(85%)
+      contrast(103%);
+  }
+  .top-menu-content .top-menu-ul > li {
+    a {
+      color: #212121;
+    }
+    @media (hover: hover) {
+      a:hover {
+        border-color: #212121;
       }
     }
   }

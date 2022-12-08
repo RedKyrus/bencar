@@ -25,6 +25,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //사이드메뉴
   sideMenuOpen();
+
+  scrollHeaderStyleChange();
 });
 
 window.addEventListener("load", () => {
@@ -237,5 +239,20 @@ let sideMenuOpen = () => {
   function closeSideMenu() {
     sideMenu.classList.remove("on-side-menu");
     sideMenu.classList.add("off-side-menu");
+  }
+};
+
+//스크롤에 따른 메뉴
+let scrollHeaderStyleChange = () => {
+  let header = document.querySelector(".header");
+  if (header === null) return;
+  window.addEventListener("scroll", styleChange);
+
+  function styleChange(e) {
+    if (window.scrollY > 30) {
+      header.classList.add("header-style-white");
+    } else {
+      header.classList.remove("header-style-white");
+    }
   }
 };

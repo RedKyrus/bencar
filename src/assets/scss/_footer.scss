@@ -18,6 +18,7 @@
     color: #fff;
     font-size: 14px;
     transform: skew(-0.03deg);
+    letter-spacing: toRem(0.06);
   }
 }
 
@@ -39,6 +40,7 @@
       * {
         color: #fff;
         font-size: 15px;
+        font-weight: 400;
         transform: skew(-0.03deg);
       }
     }
@@ -168,55 +170,58 @@
 
 @media (max-width: $mobileBaseMaxSize) {
   .footer {
-    padding-bottom: toRem(180);
+    padding: 0 toRem(40);
+    padding-top: toRem(74);
+    padding-bottom: toRem(210);
     img {
     }
     .footer-container {
     }
 
-    .footer-logo {
-      padding-top: toRem(30);
-      padding-bottom: toRem(24);
-      img {
-        width: toRem(150);
-      }
+    .copyright {
+      margin-top: toRem(20);
+      font-size: toRem(16);
     }
   }
 
   .footer-menu {
-    padding-top: toRem(36);
-    padding-bottom: toRem(26);
+    // padding-top: toRem(36);
+    // padding-bottom: toRem(26);
     .footer-menu-ul {
-      padding-bottom: toRem(36);
-      justify-content: center;
+      // padding-bottom: toRem(36);
+      // justify-content: center;
       li {
         padding: 0 toRem(50);
         &:not(:last-of-type) {
         }
         * {
-          color: #696969;
-          font-size: toRem(25);
+          // color: #696969;
+          font-size: toRem(18);
         }
       }
     }
   }
 
   .footer-info {
-    margin-top: toRem(24);
+    margin-top: toRem(0);
+    padding-left: 0;
     flex-direction: column;
   }
 
   .copy-text-cont {
-    padding-left: toRem(34);
+    flex-direction: column;
+    padding-left: toRem(0);
     p {
-      font-size: toRem(27);
+      font-size: toRem(17.6);
+      letter-spacing: toRem(-1.7);
+      transform: skew(-0.03deg);
+      // font-weight: 300;
+      word-break: keep-all;
       line-height: 1.5;
     }
-    .copyright {
-      margin-top: toRem(14);
-    }
+
     .company {
-      font-size: toRem(28);
+      font-size: toRem(18);
       margin-bottom: 5px;
     }
   }
@@ -231,6 +236,60 @@
         margin-right: toRem(16);
         img {
           width: toRem(70);
+        }
+      }
+    }
+  }
+
+  .footer-consult {
+    margin-top: toRem(40);
+    column-gap: toRem(22);
+    .consult-box {
+      flex-grow: 1;
+      border-radius: toRem(10);
+      height: toRem(100);
+    }
+    .consult-katalk {
+      width: auto;
+      .icon {
+        margin-right: toRem(8);
+        img {
+          width: toRem(44);
+        }
+      }
+      .ment {
+        font-size: toRem(20);
+        transform: skew(-0.03deg);
+      }
+    }
+    .consult-tel {
+      width: auto;
+      justify-content: center;
+      padding-left: 0;
+      .tel-title {
+        display: flex;
+        align-items: center;
+        margin-right: toRem(0);
+        .icon {
+          margin-right: toRem(8);
+          img {
+            width: toRem(38);
+          }
+        }
+        .title {
+          font-size: toRem(25);
+        }
+      }
+
+      .tel-cont {
+        display: flex;
+        align-items: center;
+        font-size: toRem(20);
+        transform: skew(-0.03deg);
+        span {
+          font-size: toRem(16);
+
+          margin-left: toRem(6);
         }
       }
     }

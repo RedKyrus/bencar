@@ -1,34 +1,22 @@
 extends ../template/layout
 
-//-함수들
-mixin titleMain(titleMain01, titleMain02, titleClassName="")
-  div(class=`title-area ${titleClassName}`)
-    p.title-main
-      span=titleMain01
-      span=titleMain02
-  
-mixin titleMainSub(titleMain, titleSub)
-  .title-area
-    p.title-main= titleMain
-    p.title-sub= titleSub
-
-mixin titleMainAndScrollID(titleMain01, titleMain02, scrollID)
-  .title-area(data-scroll-id=scrollID)
-    p.title-main
-      span=titleMain01
-      span=titleMain02
-    //- p.title-sub= titleSub
+mixin carListTitle(titleName, imgUrl)
+  div.title-cont
+    p.title=titleName 
+    div.img-box
+      img(src=`${imgPath}/main/${imgUrl}`, alt="브랜드")
+  a(href="" class="more") 더보기 +
 
 mixin carListInfoBox()
   li 
-    div 
-      img(src="", alt="")
+    div.img-box 
+      img(src="", alt="이미지")
     div.car-info-box 
       p.name GLE
       p.price 월 89만원부터
-    div 
-      p 리스 
-      p 최저가
+    div.text-tip
+      p.less 리스 
+      p.lowest 최저가
 
 
 //-==HTML==
@@ -101,17 +89,14 @@ block content
 
     section(class="sect sect-carlist")
       div(class="sect-container")
-        div.title-box
-          p 수입차량 특가
-          p 벤츠, BMW, 아우디 등 수입차 특가차량을 만나보세요 
+        div.title-area
+          p.main 수입차량 특가!
+          p.sub 벤츠, BMW, 아우디 등 수입차 특가차량을 만나보세요 
 
         div.carlist-contents
           div.car-list-info
             div.car-title.brand-benz
-              p.title 벤츠
-              div.img-box
-                img(src=`${imgPath}/main/icon_brand_benz.png`, alt="브랜드")
-              a(href="" class="more") 더보기 +
+              +carListTitle("벤츠", "icon_brand_benz.png")
             ul.car-ul
               +carListInfoBox()
               +carListInfoBox()
@@ -120,10 +105,7 @@ block content
 
           div.car-list-info
             div.car-title.brand-bmw
-              p.title BMW
-              div.img-box
-                img(src=`${imgPath}/main/icon_brand_bmw.png`, alt="브랜드")
-              a(href="" class="more") 더보기 +
+              +carListTitle("BMW", "icon_brand_bmw.png")
             ul.car-ul
               +carListInfoBox()
               +carListInfoBox()
@@ -132,10 +114,7 @@ block content
 
           div.car-list-info
             div.car-title.brand-audi
-              p.title 아우디
-              div.img-box
-                img(src=`${imgPath}/main/icon_brand_audi.png`, alt="브랜드")
-              a(href="" class="more") 더보기 +
+              +carListTitle("아우디", "icon_brand_audi.png")
             ul.car-ul
               +carListInfoBox()
               +carListInfoBox()
