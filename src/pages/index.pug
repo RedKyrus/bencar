@@ -22,25 +22,28 @@ mixin carListInfoBox()
 //-==HTML==
 block content
   main(class="wrap-container page-main") 
-    section(class="sect sect-intro")
+    section(class="sect sect-intro sect-first-top")
       div(class="sect-container")
         div.intro-bg-area
           div.img-bg
-            img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
+            //- img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
           //- div.img-car
           //-   img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
-          div 
-            img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
-          div 
-            img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
-          div 
-            img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
+        div.intro-area
+          .intro-title-box.mobile-hidden 
+            p.title-sub 빠른견적, 빠른출고 최적화된 견적을 받아보세요!
+            p.title-main 수입차 전문 렌트, 리스<br>즉시출고 문의 주세요!
+          ul.intro-cont-ul
+            li.ani-move-down
+              img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
+            li.ani-move-down
+              img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
+            li.ani-move-down
+              img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
 
 
         div.intro-area 
-          .intro-title-box 
-            p.title-sub 빠른견적, 빠른출고 최적화된 견적을 받아보세요!
-            p.title-main 수입차 전문 렌트, 리스<br>즉시출고 문의 주세요!
+          
 
         div.intro-info-bar 
           ul.info-ul

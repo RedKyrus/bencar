@@ -1,0 +1,27 @@
+extends ../../template/layout_sub
+
+
+mixin carpageTitle(mainTitle, subTitle)
+  div(class="title-area")
+    p.main=mainTitle
+    p.sub=subTitle
+
+mixin carpageListInfo(carName, rent, lease)
+  li 
+    .img-area: img(src=`${imgPath}/car/car_relese01.png`, alt="자동차이미지")
+    div.car-info
+      p.car-name=carName
+      ul.car-price-ul
+        li.price-rent
+          p.p-type 렌트
+          p.p-price #{rent.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}
+            span.won 원
+        li.price-lease
+          p.p-type 리스
+          p.p-price #{lease.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}
+            span.won 원
+    div.btn-area
+      button(type="button" class="btn btn-quote fn-open-modal-quote") 견적신청
+      a(class="btn btn-detail" href="../product/product.html") 자세히 보기
+
+block content

@@ -63,10 +63,14 @@
     }
   }
 
-  .partner-list-cont {
-    margin-top: toRem(50);
-    img {
-      width: 100%;
+  .sect-carlist {
+    .title-area {
+      .main {
+        font-size: toRem(54);
+      }
+      .sub {
+        font-size: toRem(24);
+      }
     }
   }
 
@@ -81,6 +85,7 @@
 
   //////////////
   .sect-intro {
+    padding-top: toRem(286);
     .intro-bg-area {
       width: 100%;
       height: 100%;
@@ -110,36 +115,6 @@
   }
 
   .intro-area {
-    position: absolute;
-    top: toRem(270);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    padding-top: 0;
-    text-align: left;
-
-    .intro-title-box {
-      p {
-        text-align: center;
-        text-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.3);
-      }
-      .title-sub {
-        font-size: toRem(30);
-      }
-      .title-main {
-        font-size: toRem(66);
-        margin-top: toRem(20);
-      }
-    }
-    .benz-logo-box {
-      display: none;
-      margin: 0 auto;
-      margin-top: toRem(35);
-      width: 20%;
-      img {
-        width: 100%;
-      }
-    }
   }
 
   .intro-info-bar {
@@ -272,7 +247,7 @@
   .carlist-contents {
     .car-list-info {
       overflow-x: scroll;
-      column-gap: toRem(40);
+      column-gap: toRem(28);
       &:not(:nth-child(0)) {
         border: none;
         padding: 0;
@@ -286,17 +261,17 @@
         display: none;
       }
       & > :is(div, ul) {
-        height: toRem(312);
+        height: toRem(260);
       }
     }
     .car-title {
-      width: toRem(236);
+      width: toRem(198);
       padding-left: toRem(42);
       padding-top: toRem(46);
       padding-bottom: toRem(28);
       flex-shrink: 0;
       &::before {
-        border-width: toRem(76);
+        border-width: toRem(54);
       }
       .title {
         font-size: toRem(30);
@@ -308,17 +283,20 @@
         }
       }
       .more {
-        font-size: toRem(22);
-        width: toRem(110);
-        padding: toRem(10) 0;
+        font-size: toRem(18);
+        transform: skew(-0.03deg);
+        line-height: 1;
+        width: toRem(92);
+        padding-top: toRem(12);
+        padding-bottom: toRem(8);
         border-radius: toRem(24);
       }
     }
 
     .car-ul {
-      column-gap: toRem(24);
+      column-gap: toRem(18);
       li {
-        width: toRem(222);
+        width: toRem(186);
       }
     }
   }

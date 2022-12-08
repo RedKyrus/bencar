@@ -6,14 +6,16 @@ $colorMainBlack: #191919;
 $baseSectWithSize: 1016px;
 $baseSectWithSizeSub: 1140px;
 
+$headerHeightPC: 115px;
+$headerHeightMobile: toRem(286);
 
 @function removeUnit($value) {
   //@return (calc($value / calc($value * 0 + 1)));
   @return $value * 0 + 1;
 }
 
-@function toRem($pxValue){
+@function toRem($pxValue) {
   $toNum: $pxValue * 0 + 1;
-  $numValue: calc($pxValue / $toNum );
-  @return (calc($numValue / 10))*1rem;
+  $numValue: calc($pxValue / $toNum);
+  @return (calc($numValue / 10)) * 1rem;
 }

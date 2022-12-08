@@ -6,7 +6,7 @@
 
 .intro-top-space {
   width: 100%;
-  height: 140px;
+  height: $headerHeightPC;
   background-color: #c5d8d6;
 }
 
@@ -102,7 +102,7 @@
 
 @media (max-width: $mobileBaseMaxSize) {
   .intro-top-space {
-    height: toRem(210);
+    height: $headerHeightMobile;
   }
   .page-sub-intro {
     .sect {

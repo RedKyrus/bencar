@@ -56,10 +56,11 @@
 }
 
 .ani-btn {
-  background: linear-gradient(137deg, #c052ee, #7c4efb, #563ba4);
+  // background: linear-gradient(137deg, #c052ee, #7c4efb, #563ba4);
+  background: linear-gradient(137deg, #b93adf, #6e4efb, #316197);
   box-shadow: inset 0 0 20px rgba($color: #fff, $alpha: 0.4);
   animation-name: gradientAni;
-  animation-duration: 2s;
+  animation-duration: 1.6s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   background-size: 100% 1200%;

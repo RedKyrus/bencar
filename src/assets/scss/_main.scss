@@ -169,17 +169,20 @@
 ///////////////////////
 
 .intro-area {
-  position: absolute;
-  top: 114px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1016px;
-  padding-top: 48px;
-  text-align: left;
-
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
   .intro-title-box {
+    position: absolute;
+    max-width: 1016px;
+    width: 100%;
+    z-index: 1;
+    top: 182px;
+    text-align: left;
     p {
       color: #fff;
+      letter-spacing: -1px;
     }
     .title-sub {
       font-size: 23px;
@@ -190,10 +193,52 @@
       line-height: 1.2;
     }
   }
-  .benz-logo-box {
-    margin-top: 35px;
-    img {
+  .intro-cont-ul {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    li {
+      img {
+        -webkit-user-drag: none;
+      }
     }
+  }
+}
+
+body {
+  counter-reset: num;
+}
+
+.ani-move-down {
+  transform: translateY(-100%);
+  position: relative;
+  animation-name: mainMoveDown;
+  // animation-delay: 10s;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  // counter-reset: num;
+  // counter-increment: num;
+  // animation-delay: counter(num + 1);
+
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes mainMoveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

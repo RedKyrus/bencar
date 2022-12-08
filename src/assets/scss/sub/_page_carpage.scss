@@ -1,0 +1,36 @@
+.carpage-sect-cont {
+  padding-top: $headerHeightPC;
+  padding-bottom: 132px;
+  .title-area {
+    margin-top: 112px;
+    .main {
+      color: #191919;
+      font-size: 58px;
+    }
+    .sub {
+      margin-top: 18px;
+      color: #434343;
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+}
+
+.carpage-contents {
+  margin-top: 62px;
+}
+
+.carpage-list-ul {
+  display: flex;
+  & > li {
+    border: 1px solid #dedede;
+    .car-info {
+      .car-price-ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
