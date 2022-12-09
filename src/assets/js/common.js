@@ -27,6 +27,8 @@ window.addEventListener("DOMContentLoaded", () => {
   sideMenuOpen();
 
   scrollHeaderStyleChange();
+
+  menuScrollFixing();
 });
 
 window.addEventListener("load", () => {
@@ -224,7 +226,7 @@ let sideMenuOpen = () => {
   const sideMenu = document.querySelector(".target-side-menu");
   const btnOpen = document.querySelector(".fn-open-side-menu");
   const btnClose = document.querySelector(".target-side-menu .btn-close-side-menu");
-  console.log(btnClose);
+  // console.log(btnClose);
 
   if (btnOpen === null) return;
 
@@ -255,4 +257,27 @@ let scrollHeaderStyleChange = () => {
       header.classList.remove("header-style-white");
     }
   }
+};
+
+let menuScrollFixing = () => {
+  // if (window.innerWidth > 900) return;
+
+  let activeData = document.querySelector(".active-menu-data");
+  if (activeData === null) return;
+  let activeName = activeData.dataset.activeTargetMenu;
+
+  let activeTarget = document.querySelector(`header .top-menu-ul li[data-active-name='${activeName}']`);
+  activeTarget.classList.add("active");
+  let moveScrollTarget = document.querySelector(`header .top-menu-content`);
+
+  if (window.innerWidth > 900) return;
+  let parentLeft = activeTarget.parentElement.getBoundingClientRect().left;
+  let targetLeft = activeTarget.getBoundingClientRect().left;
+
+  moveScrollTarget.scrollLeft = targetLeft - parentLeft - 60;
+
+  // console.log(activeTarget.getBoundingClientRect().left);
+  console.log(moveScrollTarget.scrollLeft);
+
+  // let menuList = document.querySelectorAll("header .top-menu-content .top-menu-ul li");
 };

@@ -21,6 +21,7 @@ mixin carListInfoBox()
 
 //-==HTML==
 block content
+  div(class="active-menu-data" data-active-target-menu="home")
   main(class="wrap-container page-main") 
     section(class="sect sect-intro sect-first-top")
       div(class="sect-container")
@@ -140,3 +141,4 @@ block content
 
 
   script(type="module" src=`${basePath}/static/js/main.js`)
+  script(src=`${basePath}/static/js/aniEventList_main.js`)

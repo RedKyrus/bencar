@@ -1,6 +1,7 @@
 extends ./_cont_carpage
 
 block content
+  div(class="active-menu-data" data-active-target-menu="car-bmw")
   main(class="wrap-container page-sub-carpage page-sub-carpage-bmw")
     section(class="sect carpage-sect-cont carpage-sect-bmw")
       div(class="sect-container")
@@ -20,3 +21,4 @@ block content
             +carpageListInfo("GLE", 250000,30000)
             +carpageListInfo("GLE", 250000,30000)
 
+        include ../../include/_paging_carpage

@@ -1,0 +1,16 @@
+//페이징
+div(class="paging-btn-area")
+  button(type="button" class="paging-btn paging-btn-first") 
+    img(src=`${imgPath}/common/paging_arrow_left_duble.png`, alt="처음 페이지")
+  button(type="button" class="paging-btn paging-btn-prev")
+    img(src=`${imgPath}/common/paging_arrow_left.png`, alt="이전 페이지")
+  
+  div(type="button" class="paging-btn-num-box")
+    -for(let i=0;i<5;i++)
+      button(type="button" class="paging-btn") #{i+1}
+  
+  button(type="button" class="paging-btn paging-btn-next")
+    img(src=`${imgPath}/common/paging_arrow_left.png`, alt="다음 페이지")
+  button(type="button" class="paging-btn paging-btn-last")
+    img(src=`${imgPath}/common/paging_arrow_left_duble.png`, alt="끝 페이지")
+  

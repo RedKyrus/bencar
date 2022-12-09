@@ -47,12 +47,12 @@
           </div>
           <nav class="top-menu-content">
             <ul class="top-menu-ul">
-              <li><a class="pc-hidden" href="../index.html">홈</a></li>
-              <li><a href="../intro/intro.html">장기렌트리스안내</a></li>
-              <li><a href="../carpage/benz.html">벤츠</a></li>
-              <li><a href="../carpage/bmw.html">BMW</a></li>
-              <li><a href="../carpage/audi.html">아우디</a></li>
-              <li><a class="fn-open-modal-car-release">즉시출고차량</a></li>
+              <li data-active-name="home"><a class="pc-hidden" href="../index.html">홈</a></li>
+              <li data-active-name="intro"><a href="../intro/intro.html">장기렌트리스안내</a></li>
+              <li data-active-name="car-benz"><a href="../carpage/benz.html">벤츠</a></li>
+              <li data-active-name="car-bmw"><a href="../carpage/bmw.html">BMW</a></li>
+              <li data-active-name="car-audi"><a href="../carpage/audi.html">아우디</a></li>
+              <li data-active-name=""><a class="fn-open-modal-car-release">즉시출고차량</a></li>
             </ul>
           </nav>
         </div>
@@ -75,6 +75,7 @@
           </ul>
         </div>
       </div>
+      <div class="active-menu-data" data-active-target-menu="car-bmw"></div>
       <main class="wrap-container page-sub-carpage page-sub-carpage-bmw">
         <section class="sect carpage-sect-cont carpage-sect-bmw">
           <div class="sect-container">
@@ -294,6 +295,20 @@
                   </div>
                 </li>
               </ul>
+            </div>
+            <!--페이징-->
+            <div class="paging-btn-area">
+              <button class="paging-btn paging-btn-first" type="button"> <img src="../img/common/paging_arrow_left_duble.png" alt="처음 페이지"></button>
+              <button class="paging-btn paging-btn-prev" type="button"><img src="../img/common/paging_arrow_left.png" alt="이전 페이지"></button>
+              <div class="paging-btn-num-box" type="button">
+                <button class="paging-btn" type="button">1</button>
+                <button class="paging-btn" type="button">2</button>
+                <button class="paging-btn" type="button">3</button>
+                <button class="paging-btn" type="button">4</button>
+                <button class="paging-btn" type="button">5</button>
+              </div>
+              <button class="paging-btn paging-btn-next" type="button"><img src="../img/common/paging_arrow_left.png" alt="다음 페이지"></button>
+              <button class="paging-btn paging-btn-last" type="button"><img src="../img/common/paging_arrow_left_duble.png" alt="끝 페이지"></button>
             </div>
           </div>
         </section>

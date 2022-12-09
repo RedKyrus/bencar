@@ -67,12 +67,12 @@ header.header.header-pos-absolute
 
     nav.top-menu-content
       ul.top-menu-ul
-        li: a(href=`${basePath}index.html` class="pc-hidden") 홈
-        li: a(href=`${basePath}intro/intro.html`) 장기렌트리스안내
-        li: a(href=`${basePath}carpage/benz.html`) 벤츠
-        li: a(href=`${basePath}carpage/bmw.html`) BMW
-        li: a(href=`${basePath}carpage/audi.html`) 아우디
-        li: a(class="fn-open-modal-car-release") 즉시출고차량
+        li(data-active-name="home"): a(href=`${basePath}index.html` class="pc-hidden") 홈
+        li(data-active-name="intro"): a(href=`${basePath}intro/intro.html`) 장기렌트리스안내
+        li(data-active-name="car-benz"): a(href=`${basePath}carpage/benz.html`) 벤츠
+        li(data-active-name="car-bmw"): a(href=`${basePath}carpage/bmw.html`) BMW
+        li(data-active-name="car-audi"): a(href=`${basePath}carpage/audi.html`) 아우디
+        li(data-active-name=""): a(class="fn-open-modal-car-release") 즉시출고차량
         //- li: a(href=`https://www.youtube.com/channel/UC_LntEPC8s3h_QVESEuc1jQ` target="_blank") 유튜브 리뷰
 
     

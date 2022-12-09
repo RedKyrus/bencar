@@ -47,12 +47,12 @@
           </div>
           <nav class="top-menu-content">
             <ul class="top-menu-ul">
-              <li><a class="pc-hidden" href="./index.html">홈</a></li>
-              <li><a href="./intro/intro.html">장기렌트리스안내</a></li>
-              <li><a href="./carpage/benz.html">벤츠</a></li>
-              <li><a href="./carpage/bmw.html">BMW</a></li>
-              <li><a href="./carpage/audi.html">아우디</a></li>
-              <li><a class="fn-open-modal-car-release">즉시출고차량</a></li>
+              <li data-active-name="home"><a class="pc-hidden" href="./index.html">홈</a></li>
+              <li data-active-name="intro"><a href="./intro/intro.html">장기렌트리스안내</a></li>
+              <li data-active-name="car-benz"><a href="./carpage/benz.html">벤츠</a></li>
+              <li data-active-name="car-bmw"><a href="./carpage/bmw.html">BMW</a></li>
+              <li data-active-name="car-audi"><a href="./carpage/audi.html">아우디</a></li>
+              <li data-active-name=""><a class="fn-open-modal-car-release">즉시출고차량</a></li>
             </ul>
           </nav>
         </div>
@@ -75,6 +75,7 @@
           </ul>
         </div>
       </div>
+      <div class="active-menu-data" data-active-target-menu="home"></div>
       <main class="wrap-container page-main"> 
         <section class="sect sect-intro sect-first-top">
           <div class="sect-container">
@@ -320,6 +321,7 @@
         </section>
       </main>
       <script type="module" src=".//static/js/main.js"></script>
+      <script src=".//static/js/aniEventList_main.js"></script>
       <!--모달-견적신청-->
             <div class="modal-wrap modal-quote">
               <div class="modal-container">
