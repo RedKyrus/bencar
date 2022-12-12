@@ -29,6 +29,23 @@
   transition: 0.5s;
   transform: translateX(0%);
 }
+
+//업
+.ani-init-to-up {
+  opacity: 0;
+  transform: translateY(120%);
+}
+
+.ani-back-to-up {
+  transition: 0.3s;
+}
+
+.ani-run-to-up {
+  opacity: 1;
+  transition: 0.6s;
+  transform: translateY(0%);
+}
+
 //로테이트
 .ani-init-y-rotate {
   opacity: 0;

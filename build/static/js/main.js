@@ -1,4 +1,5 @@
 import { CountUp } from "./lib/countUp.min.js";
+import { CountUp } from "./lib/swiper_bundle.min.7.4.1.js";
 
 let onready = () => {
   // headerSet();
@@ -6,6 +7,8 @@ let onready = () => {
   mainPageHeaderStyleSet();
 
   countUpSet();
+
+  swiperSetup();
 };
 
 window.addEventListener("DOMContentLoaded", onready);
@@ -49,4 +52,15 @@ function mainPageHeaderStyleSet() {
   if (header === null) return;
 
   header.classList.add("header-style-main");
+}
+
+function swiperSetup() {
+  const swiper = new Swiper(".swiper-intro-slide", {
+    slidesPerView: 1,
+    breakpoints: {
+      900: {
+        slidesPerView: 3,
+      },
+    },
+  });
 }

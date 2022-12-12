@@ -34,13 +34,31 @@ block content
           .intro-title-box.mobile-hidden 
             p.title-sub 빠른견적, 빠른출고 최적화된 견적을 받아보세요!
             p.title-main 수입차 전문 렌트, 리스<br>즉시출고 문의 주세요!
-          ul.intro-cont-ul
-            li.ani-move-down
-              img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
-            li.ani-move-down
-              img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
-            li.ani-move-down
-              img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
+          div.intro-cont.swiper-intro-slide
+            ul.intro-cont-ul.swiper-wrapper
+              li.ani-move-down
+                img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
+              li.ani-move-down
+                img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
+              li.ani-move-down
+                img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
+          //- div.intro-cont.swiper-intro-slide
+            ul.intro-cont-ul.swiper-wrapper
+              li.ani-move-down.swiper-slide
+                img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
+              li.ani-move-down.swiper-slide
+                img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
+              li.ani-move-down.swiper-slide
+                img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
+          //- div.intro-cont
+          //-   ul.intro-cont-ul
+          //-     li.ani-move-down
+          //-       img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
+          //-     li.ani-move-down
+          //-       img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
+          //-     li.ani-move-down
+          //-       img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
+          
 
 
         div.intro-area 
@@ -66,7 +84,7 @@ block content
           
           .event-cont
             .event-img-area
-              img(src=`${imgPath}/main/main_event_phone.png`, alt="이미지")
+              img(src=`${imgPath}/main/main_event_phone.png`, alt="이미지" class="img-phone")
               img(src=`${imgPath}/main/main_event_hand.png`, alt="이미지" class="img-hand")
             .event-text-area
               div.title-box

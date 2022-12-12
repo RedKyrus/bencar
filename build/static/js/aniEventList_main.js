@@ -1,5 +1,6 @@
 let onReady = () => {
-  transitionAniSet("to-right", ".sect-event .event-cont .event-img-area", ".sect-event", 600, 300);
+  transitionAniSet("to-right", ".sect-event .event-img-area .img-phone", ".sect-event", 600, 300);
+  transitionAniSet("to-up", ".sect-event .event-img-area .img-hand", ".sect-event", 600, 300);
   transitionAniSet("to-left", ".sect-event .event-cont .event-text-area", ".sect-event", 600, 300);
   transitionAniSet("y-rotate", ".sect-common-ad .ad-link img", ".sect-common-ad", 300, 200);
   transitionAniSet("to-small", ".sect-carlist .carlist-ad-area", ".sect-carlist .carlist-ad-area", 300, 200);
