@@ -168,16 +168,24 @@
 
 ///////////////////////
 
+.swiper-intro-slide {
+  // width: 1920px;
+  // transform: translateX(-50%);
+}
+
 .intro-area {
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   .intro-title-box {
     position: absolute;
     max-width: 1016px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     top: 182px;
     text-align: left;
     p {
@@ -193,13 +201,20 @@
       line-height: 1.2;
     }
   }
+  .intro-cont {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
   .intro-cont-ul {
     display: flex;
     width: fit-content;
     position: relative;
     li {
+      width: fit-content;
       img {
         -webkit-user-drag: none;
+        // object-fit: cover;
       }
     }
   }
@@ -528,12 +543,33 @@ body {
     justify-content: space-between;
 
     li {
+      width: 186px;
       flex-grow: 1;
       border: 1px solid #dedede;
       background-color: #fff;
+      cursor: pointer;
     }
+    .img-box {
+      overflow: hidden;
+      height: 54%;
+      width: 100%;
+      position: relative;
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        margin: 0 auto;
+        -webkit-user-drag: none;
+      }
+    }
+
     .car-info-box {
+      .name {
+        font-size: 23px;
+      }
       .price {
+        margin-top: 9px;
         color: #ee2424;
         font-size: 20px;
         font-weight: 400;
@@ -541,6 +577,7 @@ body {
     }
 
     .text-tip {
+      margin-top: 24px;
       display: flex;
       justify-content: center;
       column-gap: 8px;

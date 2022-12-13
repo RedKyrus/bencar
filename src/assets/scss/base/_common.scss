@@ -31,6 +31,10 @@
   }
 }
 
+.wrap {
+  overflow-x: hidden;
+}
+
 @media (max-width: $mobileBaseMaxSize) {
   .wrap-container {
     .page-top-title-area {

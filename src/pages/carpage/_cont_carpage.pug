@@ -8,7 +8,8 @@ mixin carpageTitle(mainTitle, subTitle)
 
 mixin carpageListInfo(carName, rent, lease)
   li 
-    .img-area: img(src=`${imgPath}/car/car_relese01.png`, alt="자동차이미지")
+    .img-area
+      img(src=`${imgPath}/car/benz/gle.png`, alt="자동차이미지")
     div.car-info
       p.car-name=carName
       ul.car-price-ul
@@ -22,7 +23,7 @@ mixin carpageListInfo(carName, rent, lease)
             span.won 원
     div.btn-area
       button(type="button" class="btn btn-quote fn-open-modal-quote") 견적신청
-      a(class="btn btn-detail" href="../product/product.html") 자세히 보기
+      a(class="btn btn-detail" href=`${basePath}/shop/shop.html`) 자세히 보기
 
 
 //- -let imgPath ="img";

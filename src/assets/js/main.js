@@ -1,7 +1,7 @@
 import { CountUp } from "./lib/countUp.min.js";
-import { CountUp } from "./lib/swiper_bundle.min.7.4.1.js";
+import "./lib/swiper_bundle.min.7.4.1.js";
 
-let onready = () => {
+let onReady = () => {
   // headerSet();
 
   mainPageHeaderStyleSet();
@@ -11,7 +11,7 @@ let onready = () => {
   swiperSetup();
 };
 
-window.addEventListener("DOMContentLoaded", onready);
+window.addEventListener("DOMContentLoaded", onReady);
 
 const options = {
   startVal: 10,
@@ -55,12 +55,15 @@ function mainPageHeaderStyleSet() {
 }
 
 function swiperSetup() {
-  const swiper = new Swiper(".swiper-intro-slide", {
-    slidesPerView: 1,
-    breakpoints: {
-      900: {
-        slidesPerView: 3,
-      },
-    },
-  });
+  console.log("작동");
+  // const swiper = new Swiper(".swiper-intro-slide", {
+  //   // slidesPerView: 1,
+  //   slidesPerView: 1,
+  //   // centeredSlides: true,
+  //   breakpoints: {
+  //     900: {
+  //       slidesPerView: "auto",
+  //     },
+  //   },
+  // });
 }

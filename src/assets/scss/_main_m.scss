@@ -266,7 +266,7 @@
     }
     .car-title {
       width: toRem(198);
-      padding-left: toRem(42);
+      padding-left: toRem(32);
       padding-top: toRem(46);
       padding-bottom: toRem(28);
       flex-shrink: 0;
@@ -297,6 +297,31 @@
       column-gap: toRem(18);
       li {
         width: toRem(186);
+      }
+      .car-info-box {
+        .name {
+          font-size: toRem(23);
+        }
+        .price {
+          margin-top: toRem(9);
+          color: #ee2424;
+          font-size: toRem(20);
+        }
+      }
+
+      .text-tip {
+        margin-top: toRem(27);
+        column-gap: toRem(8);
+        p {
+          font-size: toRem(15);
+          transform: skew(-0.03deg);
+          padding: toRem(6) toRem(8);
+          border-radius: toRem(4);
+        }
+        .less {
+        }
+        .lowest {
+        }
       }
     }
   }

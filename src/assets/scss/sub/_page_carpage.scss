@@ -29,12 +29,26 @@
     border: 1px solid #dedede;
     padding: 0 12px;
     padding-bottom: 12px;
+    .img-area {
+      overflow: hidden;
+      height: 40%;
+      width: 100%;
+      position: relative;
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        margin: 0 auto;
+        -webkit-user-drag: none;
+      }
+    }
     .car-info {
       .car-name {
         font-size: 23px;
       }
       .car-price-ul {
-        margin-top: 28px;
+        margin-top: 22px;
         li {
           display: flex;
           justify-content: space-between;
@@ -60,7 +74,8 @@
         width: 100%;
         border-radius: 4px;
         color: #fff;
-        font-size: 13px;
+        font-size: 14px;
+        transform: skew(-0.06deg);
         // font-weight: 600;
         height: 28px;
         display: flex;
@@ -73,6 +88,73 @@
       .btn-detail {
         margin-top: 4px;
         background-color: #4b57ca;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobileBaseMaxSize) {
+  .carpage-sect-cont {
+    padding-top: $headerHeightMobile;
+    padding-bottom: toRem(132);
+    .title-area {
+      margin-top: toRem(80);
+      .main {
+        font-size: toRem(76);
+      }
+      .sub {
+        margin-top: toRem(20);
+
+        font-size: toRem(36);
+      }
+    }
+  }
+  .carpage-contents {
+    margin-top: toRem(42);
+  }
+
+  .carpage-list-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: toRem(20);
+    row-gap: toRem(24);
+    & > li {
+      border: 1px solid #dedede;
+      padding: 0 toRem(20);
+      padding-bottom: toRem(18);
+      .car-info {
+        .car-name {
+          font-size: toRem(30);
+        }
+        .car-price-ul {
+          margin-top: toRem(38);
+          li {
+            padding: toRem(12) 0;
+            &:nth-of-type(1) {
+            }
+            p {
+              font-size: toRem(28);
+            }
+            .p-price {
+            }
+          }
+        }
+      }
+      .btn-area {
+        margin-top: toRem(8);
+        & > :is(button, a) {
+        }
+        .btn {
+          border-radius: toRem(12);
+          font-size: toRem(24);
+          // font-weight: 600;
+          height: toRem(66);
+        }
+        .btn-quote {
+        }
+        .btn-detail {
+          margin-top: toRem(7);
+        }
       }
     }
   }
