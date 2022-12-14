@@ -27,7 +27,7 @@ function countUpSet() {
     let id = "countTargetId" + (index + 1).toString();
     item.id = id;
     let countNum = parseInt(item.innerText);
-    console.dir(countNum);
+    // console.dir(countNum);
 
     let countTarget = new CountUp(id, countNum, options);
     if (!countTarget.error) {
@@ -55,7 +55,6 @@ function mainPageHeaderStyleSet() {
 }
 
 function swiperSetup() {
-  console.log("작동");
   const swiper = new Swiper(".swiper-intro-slide", {
     // slidesPerView: 1,
     // centeredSlides: true,

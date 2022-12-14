@@ -35,12 +35,9 @@ let transitionAniSet = (aniCssName, targetName, triggerName, onCorrect, offCorre
   if (onlyPC && window.innerWidth <= 900) return;
   let target = document.querySelector(targetName);
   let trigger = document.querySelector(triggerName);
-  console.log(target);
+
   let triggerPos = trigger.getBoundingClientRect().top + window.pageYOffset;
   target.classList.add("ani-init-" + aniCssName);
-
-  console.log(triggerPos);
-  console.log(triggerPos - onCorrect);
 
   window.addEventListener("scroll", aniRun);
 
