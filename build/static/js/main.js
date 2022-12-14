@@ -56,14 +56,19 @@ function mainPageHeaderStyleSet() {
 
 function swiperSetup() {
   console.log("작동");
-  // const swiper = new Swiper(".swiper-intro-slide", {
-  //   // slidesPerView: 1,
-  //   slidesPerView: 1,
-  //   // centeredSlides: true,
-  //   breakpoints: {
-  //     900: {
-  //       slidesPerView: "auto",
-  //     },
-  //   },
-  // });
+  const swiper = new Swiper(".swiper-intro-slide", {
+    // slidesPerView: 1,
+    // centeredSlides: true,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: ".intro-slide-controller .slide-prev",
+      prevEl: ".intro-slide-controller .slide-next",
+    },
+    breakpoints: {
+      901: {
+        slidesPerView: "auto",
+      },
+    },
+  });
 }

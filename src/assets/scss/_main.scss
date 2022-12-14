@@ -176,8 +176,6 @@
 .intro-area {
   position: relative;
   overflow: hidden;
-  // display: flex;
-  // justify-content: center;
   .intro-title-box {
     position: absolute;
     max-width: 1016px;
@@ -202,11 +200,17 @@
     }
   }
   .intro-cont {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
+    // overflow: hidden;
+    position: relative;
+    width: 1920px;
+
+    // width: 100%;
+    // margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .intro-cont-ul {
+    width: 100%;
     display: flex;
     width: fit-content;
     position: relative;
@@ -220,31 +224,29 @@
   }
 }
 
-body {
-  counter-reset: num;
-}
+@media (min-width: calc(($mobileBaseMaxSize) + 1px)) {
+  .ani-move-down {
+    transform: translateY(-100%);
+    position: relative;
+    animation-name: mainMoveDown;
+    // animation-delay: 10s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    // counter-reset: num;
+    // counter-increment: num;
+    // animation-delay: counter(num + 1);
 
-.ani-move-down {
-  transform: translateY(-100%);
-  position: relative;
-  animation-name: mainMoveDown;
-  // animation-delay: 10s;
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  // counter-reset: num;
-  // counter-increment: num;
-  // animation-delay: counter(num + 1);
-
-  &:nth-of-type(1) {
-    animation-delay: 0s;
-  }
-  &:nth-of-type(2) {
-    animation-delay: 0.2s;
-  }
-  &:nth-of-type(3) {
-    animation-delay: 0.4s;
+    &:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
   }
 }
 

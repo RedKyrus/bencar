@@ -18,6 +18,11 @@ mixin carListInfoBox(carName, price, imgUrl)
       p.less 리스 
       p.lowest 최저가
 
+mixin mobileLastCarListInfoBox(href)
+  li.btn-last-box.pc-hidden  
+    a(class="btn-go" href=`carpage/${href}`)
+      div.icon-plus
+
 
 //-==HTML==
 block content
@@ -25,8 +30,8 @@ block content
   main(class="wrap-container page-main") 
     section(class="sect sect-intro sect-first-top")
       div(class="sect-container")
-        div.intro-bg-area
-          div.img-bg
+        //- div.intro-bg-area
+          //- div.img-bg
             //- img(src=`${imgPath}/main/main_intro_bg.jpg`, alt="이미지")
           //- div.img-car
           //-   img(src=`${imgPath}/main/main_intro_car.png`, alt="이미지")
@@ -34,23 +39,8 @@ block content
           .intro-title-box.mobile-hidden 
             p.title-sub 빠른견적, 빠른출고 최적화된 견적을 받아보세요!
             p.title-main 수입차 전문 렌트, 리스<br>즉시출고 문의 주세요!
-          div.intro-cont
-            ul.intro-cont-ul
-              li.ani-move-down
-                img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
-              li.ani-move-down
-                img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
-              li.ani-move-down
-                img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
-          //- div.intro-cont.swiper-intro-slide
-          //-   ul.intro-cont-ul.swiper-wrapper
-          //-     li.swiper-slide
-          //-       img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
-          //-     li.swiper-slide
-          //-       img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
-          //-     li.swiper-slide
-          //-       img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
-          //- div.intro-cont.swiper-intro-slide
+          
+          div.intro-cont.swiper-intro-slide
             ul.intro-cont-ul.swiper-wrapper
               li.ani-move-down.swiper-slide
                 img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
@@ -58,19 +48,15 @@ block content
                 img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
               li.ani-move-down.swiper-slide
                 img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
-          //- div.intro-cont
-          //-   ul.intro-cont-ul
-          //-     li.ani-move-down
-          //-       img(src=`${imgPath}/main/main_intro01.png`, alt="이미지")
-          //-     li.ani-move-down
-          //-       img(src=`${imgPath}/main/main_intro02.png`, alt="이미지")
-          //-     li.ani-move-down
-          //-       img(src=`${imgPath}/main/main_intro03.png`, alt="이미지")
-          
+          .intro-slide-controller.pc-hidden 
+              .controller-area 
+                button.btn-slide.slide-prev
+                  img(src=`${imgPath}/main/btn_arrow_left.png`, alt="이미지")
+                button.btn-slide.slide-next
+                  img(src=`${imgPath}/main/btn_arrow_left.png`, alt="이미지")
+            
+            
 
-
-        div.intro-area 
-          
 
         div.intro-info-bar 
           ul.info-ul
@@ -78,7 +64,7 @@ block content
               p.name 오늘상담문의
               p.num.count-target 205
             li 
-              p.name 벤츠즉시출고
+              p.name 즉시출고
               p.num.count-target 49
             li 
               p.name 누적계약수
@@ -132,6 +118,7 @@ block content
               +carListInfoBox("GLB",89,`${imgPath}/car/benz/glb.png`)
               +carListInfoBox("GLC",89,`${imgPath}/car/benz/glc.png`)
               +carListInfoBox("GLE",89,`${imgPath}/car/benz/gle.png`)
+              +mobileLastCarListInfoBox("benz.html")
 
           div.car-list-info
             div.car-title.brand-bmw
@@ -141,6 +128,7 @@ block content
               +carListInfoBox("X2",89,`${imgPath}/car/bmw/x2.png`)
               +carListInfoBox("X3",89,`${imgPath}/car/bmw/x3.png`)
               +carListInfoBox("X4",89,`${imgPath}/car/bmw/x4.png`)
+              +mobileLastCarListInfoBox("bmw.html")
 
           div.car-list-info
             div.car-title.brand-audi
@@ -150,6 +138,7 @@ block content
               +carListInfoBox("A5",89,`${imgPath}/car/audi/a5.png`)
               +carListInfoBox("A6",89,`${imgPath}/car/audi/a6.png`)
               +carListInfoBox("A7",89,`${imgPath}/car/audi/a7.png`)
+              +mobileLastCarListInfoBox("audi.html")
 
         div.carlist-ad-area
           button(class="ad-link fn-open-modal-quote")
