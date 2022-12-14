@@ -66,6 +66,7 @@ function swiperSetup() {
     },
     breakpoints: {
       901: {
+        loop: false,
         slidesPerView: "auto",
       },
     },
