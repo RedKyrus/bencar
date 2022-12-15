@@ -355,12 +355,16 @@
         }
         .price {
           margin-top: toRem(9);
-          color: #ee2424;
-          font-size: toRem(20);
+          font-size: toRem(26);
+          transform: skew(-0.03deg);
+          .won {
+            margin-left: toRem(4);
+            font-size: toRem(22);
+          }
         }
       }
       .btn-last-box {
-        width: toRem(90);
+        width: toRem(80);
         border: none;
         background: transparent;
         // background-color: #888;
@@ -406,7 +410,7 @@
       }
 
       .text-tip {
-        margin-top: toRem(27);
+        margin-top: toRem(16);
         column-gap: toRem(8);
         p {
           font-size: toRem(15);

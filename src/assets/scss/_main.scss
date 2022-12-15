@@ -571,15 +571,21 @@
         font-size: 23px;
       }
       .price {
-        margin-top: 9px;
+        // font-family: "Noto Sans KR", sans-serif;
+        margin-top: 12px;
         color: #ee2424;
-        font-size: 20px;
-        font-weight: 400;
+        font-size: 22px;
+        font-weight: 500;
+        .won {
+          font-size: 18px;
+          margin-left: 3px;
+          font-weight: 400;
+        }
       }
     }
 
     .text-tip {
-      margin-top: 24px;
+      margin-top: 16px;
       display: flex;
       justify-content: center;
       column-gap: 8px;

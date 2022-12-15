@@ -13,7 +13,8 @@ mixin carListInfoBox(carName, price, imgUrl)
       img(src=imgUrl, alt="이미지")
     div.car-info-box 
       p.name=carName
-      p.price 월 #{price}만원부터
+      p.price #{price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+        span.won 원
     div.text-tip
       p.less 리스 
       p.lowest 최저가
@@ -114,30 +115,30 @@ block content
             div.car-title.brand-benz
               +carListTitle("벤츠", "icon_brand_benz.png","benz.html")
             ul.car-ul
-              +carListInfoBox("GLA",89,`${imgPath}/car/benz/gla.png`)
-              +carListInfoBox("GLB",89,`${imgPath}/car/benz/glb.png`)
-              +carListInfoBox("GLC",89,`${imgPath}/car/benz/glc.png`)
-              +carListInfoBox("GLE",89,`${imgPath}/car/benz/gle.png`)
+              +carListInfoBox("E250",633300,`${imgPath}/car/benz/e250.png`)
+              +carListInfoBox("S350d",1426500,`${imgPath}/car/benz/s350d3.png`)
+              +carListInfoBox("GLC 200d",724500,`${imgPath}/car/benz/glc200d.png`)
+              +carListInfoBox("GLE 300d",1051200,`${imgPath}/car/benz/gle300d.png`)
               +mobileLastCarListInfoBox("benz.html")
 
           div.car-list-info
             div.car-title.brand-bmw
               +carListTitle("BMW", "icon_brand_bmw.png", "bmw.html")
             ul.car-ul
-              +carListInfoBox("X1",89,`${imgPath}/car/bmw/x1.png`)
-              +carListInfoBox("X2",89,`${imgPath}/car/bmw/x2.png`)
-              +carListInfoBox("X3",89,`${imgPath}/car/bmw/x3.png`)
-              +carListInfoBox("X4",89,`${imgPath}/car/bmw/x4.png`)
+              +carListInfoBox("320i",565100 ,`${imgPath}/car/bmw/320i.png`)
+              +carListInfoBox("520i",656500 ,`${imgPath}/car/bmw/520i.png`)
+              +carListInfoBox("740i",1988600 ,`${imgPath}/car/bmw/740i.png`)
+              +carListInfoBox("X7",1436200 ,`${imgPath}/car/bmw/x7.png`)
               +mobileLastCarListInfoBox("bmw.html")
 
           div.car-list-info
             div.car-title.brand-audi
               +carListTitle("아우디", "icon_brand_audi.png", "audi.html")
             ul.car-ul
-              +carListInfoBox("A4",89,`${imgPath}/car/audi/a4.png`)
-              +carListInfoBox("A5",89,`${imgPath}/car/audi/a5.png`)
-              +carListInfoBox("A6",89,`${imgPath}/car/audi/a6.png`)
-              +carListInfoBox("A7",89,`${imgPath}/car/audi/a7.png`)
+              +carListInfoBox("A4",550600,`${imgPath}/car/audi/a4.png`)
+              +carListInfoBox("A6",697000,`${imgPath}/car/audi/a6.png`)
+              +carListInfoBox("Q5",733200,`${imgPath}/car/audi/q5.png`)
+              +carListInfoBox("Q8",1113200,`${imgPath}/car/audi/q8.png`)
               +mobileLastCarListInfoBox("audi.html")
 
         div.carlist-ad-area
