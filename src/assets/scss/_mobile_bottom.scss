@@ -18,20 +18,19 @@
     height: toRem(134);
     display: flex;
     justify-content: space-around;
-    padding-top: toRem(22);
+    padding-top: toRem(18);
     li {
       text-align: center;
       a,
       button {
-        // height: toRem(84);
         display: block;
         img {
           width: toRem(58);
         }
         p {
           margin-top: toRem(12);
-          font-size: toRem(26);
-          // font-weight: 500;
+          font-size: toRem(24);
+          transform: skew(-0.03deg);
         }
       }
     }

@@ -171,8 +171,9 @@
     .info-ul {
       width: 100%;
       height: auto;
-      padding-top: toRem(42);
-      padding-bottom: toRem(46);
+      padding: 0 toRem(38);
+      padding-top: toRem(24);
+      padding-bottom: toRem(22);
       li {
         width: 70%;
         display: flex;
@@ -183,12 +184,12 @@
         }
         .name {
           margin-right: toRem(14);
-          font-size: toRem(32);
+          font-size: toRem(28);
         }
         .num {
           margin-top: toRem(24);
           font-family: "GmarketSans", sans-serif;
-          font-size: toRem(52);
+          font-size: toRem(41);
           font-weight: 500;
           letter-spacing: 0;
         }

@@ -499,13 +499,13 @@ $searchBorderR: 40px;
       justify-content: baseline;
       padding: 0 toRem(0);
       & > li {
-        padding: 0 toRem(30);
+        padding: 0 toRem(16);
         &::after {
           content: none;
         }
         a {
           position: relative;
-          font-size: toRem(36);
+          font-size: toRem(31);
           padding: 0 toRem(14);
           min-width: fit-content;
           &:hover {
